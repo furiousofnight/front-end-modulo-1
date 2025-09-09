@@ -87,8 +87,6 @@ O projeto cobre desde a **estrutura básica do HTML** até o uso de **CSS extern
 
 ## 🙏 Créditos
 
-## 🙏 Créditos
-
 Desenvolvido por **FuriosOfNight**.  
 Este projeto se baseia também no conteúdo do **Curso em Vídeo**, que ofereceu fundamentos importantes de HTML5 e CSS3.
 
