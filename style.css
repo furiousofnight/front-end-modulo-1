@@ -756,7 +756,8 @@ nav.navbar ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 16px; /* menos espaço */
+    gap: 12px; /* ainda mais compacto */
+    flex-wrap: wrap; /* permite quebrar linha se não couber */
 }
 nav.navbar li {
     display: inline-block;
@@ -768,19 +769,20 @@ nav.navbar a {
     padding: 4px 8px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 0.95rem; /* levemente menor */
+    white-space: nowrap; /* evita quebra de texto */
 }
 @media (max-width: 600px) {
     nav.navbar ul {
-        flex-direction: column;
         gap: 6px;
+        flex-wrap: wrap;
     }
     nav.navbar {
         padding: 2px 4px;
     }
     nav.navbar a {
-        font-size: 0.95rem;
-        padding: 6px 12px;
+        font-size: 0.92rem;
+        padding: 6px 10px;
     }
 }
 /* Índice simples */
