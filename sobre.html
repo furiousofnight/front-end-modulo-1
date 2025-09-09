@@ -61,15 +61,35 @@
     }
 
     .cta-button {
-        padding: 12px 25px;
-        background-color: #e6ff03;
-        color: #0e19af;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+    padding: 12px 25px;
+    background-color: #e6ff03;
+    color: #0e19af;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+    margin: 8px 6px;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
 
+@media (max-width: 600px) {
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .cta-button {
+        min-width: 70vw;
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+}
     .cta-button:hover {
         background-color: #d4e600;
     }
