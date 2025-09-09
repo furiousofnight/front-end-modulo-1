@@ -1,0 +1,512 @@
+<!-- Estilos inline: explicação didática -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estilos Inline — Explicação</title>
+  <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+<link rel="stylesheet" href="style.css">
+  <style>
+    /* Variáveis globais */
+:root {
+  --cor-fundo: #00181bc4;
+  --cor-texto: #fff;
+  --cor-destaque: yellow;
+  --cor-code-bg: #16242d;
+  --cor-code-border: #00e0ff;
+  --cor-link: #22f8ff;
+  --cor-box-shadow: rgba(0, 0, 0, 0.5);
+  --fonte-principal: "Segoe UI", Arial, sans-serif;
+  --fonte-mono: 'Fira Mono', monospace;
+}
+
+/* Reset e corpo */
+body {
+  font-family: var(--fonte-principal);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4 {
+  color: var(--cor-destaque);
+  text-align: center;
+  margin-top: 32px;
+  text-shadow: 0 2px 8px #0008;
+  font-weight: bold;
+}
+
+h1 { font-size: 2.2em; letter-spacing: 1px; margin-bottom: 24px; }
+h2 { font-size: 1.5em; margin-bottom: 16px; }
+h3, h4 { font-size: 1.18em; }
+
+/* Títulos especiais */
+.titulo-principal {
+  text-align: center;
+  color: var(--cor-destaque);
+  font-size: 2.2em;
+  margin: 24px 0 8px 0;
+  text-shadow: 0 2px 8px #0008;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+/* Marcação didática */
+mark { padding: 2px 4px; border-radius: 4px; }
+mark.amarelo { background-color: #fff700; }
+mark.verde { background-color: #4cffb3; }
+
+/* Código */
+pre {
+  background: var(--cor-code-bg);
+  border-left: 4px solid var(--cor-code-border);
+  border-radius: 6px;
+  padding: 16px;
+  margin: 24px auto;
+  max-width: 750px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px var(--cor-box-shadow);
+}
+
+code {
+  color: #f9f9f9;
+  font-family: var(--fonte-mono);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: block;
+}
+
+/* Divisor */
+hr {
+  border: none;
+  border-top: 2px solid #f3eeec;
+  margin: 16px 20px 24px 20px;
+  width: 100%;
+  box-shadow: 0 2px 8px #0006;
+}
+
+/* Listas */
+ul, ol {
+  padding-left: 32px;
+  padding-right: 32;
+  margin: 0 0 4px 0;
+  list-style-position: inside;
+}
+
+ul.checklist li::before { content: "✔ "; color: #00ff88; font-weight: bold; }
+li { margin-bottom: 0.3em; line-height: 1.2; }
+
+
+/* indice simples */
+nav.indice-simples {
+        width: 100%;
+        max-width: 340px;
+        margin: 32px 0 32px 0;
+        padding: 0px 18px 0px 18px;
+        background: none;
+        color: #e79039;
+        text-align: left;
+        white-space: nowrap;
+    }
+    nav.indice-simples ul {
+        list-style: disc inside;
+        padding-left: 0.5em;
+        margin: 0;
+    }
+    nav.indice-simples li {
+        margin: 0;
+    }
+    nav.indice-simples a {
+        color: #22f8ff;
+        text-decoration: none;
+    }
+    nav.indice-simples a:hover {
+        text-decoration: underline;
+    }
+    nav.indice-simples h2 {
+        margin-top: 0.5em;
+        margin-bottom: 0.6em;
+        text-align: left;
+        padding-left: 15px;
+        color: yellow;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+/* Boas práticas */
+.boas-praticas {
+  padding: 0px 28px 18px;
+  margin: 32px auto;
+  max-width: 900px;
+  font-size: 1.08em;
+  text-align: left;
+  color: #e6f7ff;
+}
+
+.boas-praticas ul,
+.boas-praticas ol {
+  max-width: 600px;       /* limita a largura da lista */
+  margin: 0;              /* remove margem padrão */
+  padding-left: 20px;     /* afasta do lado esquerdo */
+  list-style-position: inside;
+}
+
+/* Checklist rápido */
+.checklist-rapido h2 {
+  text-align: center;       /* título centralizado */
+  margin-bottom: 16px;
+  color: yellow;
+}
+
+.checklist-rapido {
+  text-align: left;         /* lista alinhada à esquerda */
+  max-width: none;          /* ocupa toda a largura disponível */
+  margin: 0;                /* remove centralização */
+  padding-left: 32px;          /* remove recuo lateral */
+  list-style-position: inside;
+}
+
+.checklist-rapido li {
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  text-align: left;         /* garante alinhamento à esquerda */
+}
+
+
+/* Blocos estilizados (reuso) */
+.bloco {
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-shadow: 0 2px 10px var(--cor-box-shadow);
+}
+ .proxima-aula {
+    background: #1e2d3b;
+    border: 2px solid #1eff00;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 32px auto 32px auto;
+    max-width: 600px;
+    color: #04fc2d;
+    box-shadow: 0 2px 10px #0005;
+    font-size: 1.1em;
+    text-align: center;
+}
+.proxima-aula a {
+  color: rgb(237, 253, 14);
+  text-decoration: none;
+  font-weight: bold;
+}
+.proxima-aula a:hover {
+  color: #fff;
+  background: #9b04ff;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.creditos {
+    background: #232b36;
+    border: 2px solid #143df0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 32px auto 32px auto;
+    max-width: 700px;
+    color: #fff;
+    box-shadow: 0 2px 10px #0005;
+    text-align: center;
+        }
+.creditos a { color: #00e1ff; text-decoration: underline; }
+.creditos a:hover { color: #ffe066; }
+
+/* Exemplos visuais */
+.exemplo-inline, .exemplo-externo { margin: 40px auto; max-width: 1000px; padding: 20px; }
+
+.visual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.exemplo-container { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+
+.exemplo-codigo { flex: 1; min-width: 300px; }
+
+.exemplo-render, .resultado {
+  flex: 1; min-width: 300px;
+  background: rgb(7, 39, 49);
+  border: 2px solid #ff7f50;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #0006;
+  font-family: Arial, sans-serif;
+}
+
+.exemplo-render h1 { color: aqua; font-size: 1.5em; }
+.exemplo-render h2 { color: rgb(165, 30, 255); font-size: 1.2em; }
+.exemplo-render p { font-size: 16px; color: #fff; text-align: justify; }
+
+  </style>
+</head>
+<body>
+      <!-- Navbar  -->
+    <nav class="navbar">
+    <ul>
+        <li><a href="apresentacao.html">🏠 Início</a></li>
+        <li><a href="indice-geral.html">📑 Índice Geral De Aulas</a></li>
+        <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','025')">⚖ Política</a></li>
+        <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','025')">👤 Sobre</a></li>
+    </ul>
+    </nav>
+  <h1 class="centralizado">📘 Aula 25: Estilos Inline 📘</h1>
+  <hr>
+  <nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#o-que-e-estilo-inline"><strong>O que é estilo inline?</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-base-inline"><strong>Código Base Usando Estilo Inline</strong></a>
+        </li>
+        <li>
+            <a href="#o-que-cada-prioridade-faz"><strong>O que cada propriedade está fazendo</strong></a>
+        </li>
+        <li>
+            <a href="#boas-praticas"><strong>Boas práticas quando usar inline</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-css-externo"><strong>Exemplo & Resultado CSS Externo</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-css-inline"><strong>Exemplo & Resultado CSS Inline</strong></a>
+        </li>
+        <li><a href="#checklist"><strong>Checklist Rápido</strong></a></li>
+    </ul>
+    </nav>
+<hr>
+    <section class="explicacao">
+      <h2 id="o-que-e-estilo-inline">O que é estilo inline?</h2>
+      <p>
+          Estilo <mark class="amarelo"><strong>inline</strong></mark> é quando você aplica CSS diretamente na tag, usando o atributo <strong>
+              <mark class="amarelo"></code>style="…"</mark>
+          </strong>. É rápido para demonstrar e testar.
+      </p>
+    </section>
+
+    <hr>
+
+    <section class="explicacao">
+      <h2>Código Base Exemplo: Usando Estilo Inline</h2>
+      
+<pre><code>
+  &lt;body style="<mark class="amarelo"><strong>background-color</strong></mark>: <mark class="verde"><strong>rgb(7, 39, 49)</strong></mark>
+  ; <mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>margin</strong></mark>: <mark class="verde"><strong>20px</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>20px</strong></mark>;"&gt;
+  &lt;h1 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>aqua</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.5em</strong></mark>;"&gt;Capitulo 1&lt;/h1&gt;
+  &lt;h2 style="<mark class="amarelo"><strong>color:</strong></mark><mark class="verde"><strong>rgb(165, 30, 255);</strong></mark> <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 1.1&lt;/h2&gt;
+  &lt;p style="<mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(255, 255, 255)</strong></mark>
+  <mark class="amarelo"><strong>text-align</strong></mark>: <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/p&gt;
+  &lt;h2 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(165, 30, 255)</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 1.2&lt;/h2&gt;&lt;p style="
+  <mark class="amarelo"><strong>font-family</strong></mark>:<mark class="verde"><strong>Arial, sans-serif</strong></mark>;<mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>:<mark class="verde"><strong>rgb(255, 255, 255):;</strong></mark>
+  <mark class="amarelo"><strong>text-align</strong></mark>: <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/p&gt;
+  &lt;h1 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>aqua</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.5em</strong></mark>;"&gt;Capitulo 2&lt;/h1&gt;
+  &lt;h2 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(165, 30, 255)</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 2.1&lt;/h2&gt;
+  &lt;P style="<mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(255, 255, 255)</strong></mark>
+  <mark class="amarelo"><strong>text-align:</strong></mark> <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/P&gt;
+  &lt;/body&gt;
+</pre></code>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+      <h2>O que cada propriedade está fazendo</h2>
+      <h3><strong>&lt;body style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>background-color</strong></mark>: <strong>
+                <mark class="verde">rgb(7, 39, 49)</mark>
+            </strong> — define a cor de fundo da página.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-family</strong></mark>: <strong>
+                <mark class="verde">Arial, sans-serif</mark>
+            </strong> — define a família de fontes padrão para todo o documento (os filhos herdam, a menos que sobrescrevam).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>margin</strong></mark>: <strong>
+                <mark class="verde">20px</mark>
+            </strong> — adiciona espaço externo nas bordas da página (afasta o conteúdo das bordas da janela).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">20px</mark>
+            </strong> — tamanho base de fonte do documento. Unidades em <code>em</code> (dos títulos) vão se basear nisso.
+        </li>
+      </ul>
+      <h3><strong>&lt;h1 style="…"&gt; e &lt;h2 style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>color</strong></mark>: <strong>
+                <mark class="verde">aqua</mark>
+            </strong> / <strong>
+                <mark class="verde">rgb(165, 30, 255)</mark>
+            </strong> — cor do texto do título.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">1.5em</mark>
+            </strong> (h1) e <strong>
+                <mark class="verde">1.2em</mark>
+            </strong> (h2) — tamanhos relativos ao <strong>font-size do elemento pai</strong> (no caso, o <code>body</code> com 20px).
+          • 1.5em ≈ 30px; 1.2em ≈ 24px.
+        </li>
+      </ul>
+      <h3><strong>&lt;p style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>font-family</strong></mark>: <strong>
+                <mark class="verde">Arial, sans-serif</mark>
+            </strong> — aqui é redundante, pois o <code>body</code> já definiu; mantive só para demonstrar herança vs. sobrescrita.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">16px</mark>
+            </strong> — tamanho do parágrafo (menor que o base de 20px para dar hierarquia visual).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>color</strong></mark>: <strong>
+                <mark class="verde">rgb(255, 255, 255)</mark>
+            </strong> — texto branco para contraste no fundo escuro.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>text-align</strong></mark>: <strong>
+                <mark class="verde">justify</mark>
+            </strong> — alinha o texto dos parágrafos em blocos (bordas esquerda e direita retinhas).
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+<div class="explicacao">
+    <h2>Boas práticas quando usar inline</h2>
+    <ul>
+      <li><mark class="verde"><strong>Rápido para demos</strong></mark>: perfeito para aulas, protótipos e testes.</li>
+      <li><mark class="verde"><strong>Evite em produção</strong></mark>: inline dificulta manutenção e repete código. Prefira classes no CSS externo.</li>
+      <li><mark class="verde"><strong>Herança</strong></mark>: defina o que for global no <mark class="amarelo"><strong>body</strong></mark> (fonte, cor base) e aplique <strong>apenas exceções</strong> nos elementos.</li>
+      <li><mark class="verde"><strong>Unidades</strong></mark>: <mark class="amarelo"><strong>em</strong> / <strong>rem</strong></mark> são ótimas para tamanhos relativos (responsividade). <strong>px</strong> dá controle absoluto.</li>
+      <li><strong>Acessibilidade</strong>: garanta bom contraste entre <strong>color</strong> e <strong>background-color</strong>.</li>
+    </ul>
+</div>
+    <hr>
+
+    <!-- Bloco comparativo CSS externo -->
+<section class="explicacao">
+  <h2 id="exemplo-css-externo">Exemplo Visual: CSS Interno</h2>
+  <div class="exemplo-container">
+    <!-- Código à esquerda -->
+    <div class="exemplo-codigo">
+    <pre>
+        <code>
+        /* CSS Interno */
+        body {
+        background-color: rgb(7, 39, 49);
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        font-size: 20px;
+        }
+        h1 { color: aqua; font-size: 1.5em; }
+        h2 { color: rgb(165, 30, 255); 
+        font-size: 1.2em; }
+        p  { font-size: 16px; 
+        color: rgb(255, 255, 255); 
+        text-align: justify; }
+      </code>
+    </pre>
+    </div>
+
+    <!-- Resultado à direita -->
+    <div class="exemplo-render">
+      <h1>Capítulo 1</h1>
+      <h2>Capítulo 1.1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
+      <h2>Capítulo 1.2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
+    </div>
+  </div>
+</section>
+    <hr>
+    <!-- Bloco Exemplo Visual -->
+<section class="explicacao">
+  <h2 id="exemplo-css-inline">Exemplo Visual: Código Inline & Resultado</h2>
+  <div class="visual-grid">
+    <!-- Coluna Código -->
+    <div class="codigo">
+      <pre><code>
+&lt;h1 style="color:aqua; font-size:1.5em;"&gt;Capítulo 1&lt;/h1&gt;
+&lt;h2 style="color:rgb(165,30,255); font-size:1.2em;"&gt;Capítulo 1.1&lt;/h2&gt;
+&lt;p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;"&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+&lt;/p&gt;
+      </code></pre>
+    </div>
+
+    <!-- Coluna Resultado -->
+    <div class="resultado">
+      <h1 style="color:aqua; font-size:1.5em;">Capítulo 1</h1>
+      <h2 style="color:rgb(165, 30, 255); font-size:1.2em;">Capítulo 1.1</h2>
+      <p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.
+      </p>
+    </div>
+  </div>
+</section>
+    <hr>
+
+    <section class="explicacao">
+      <h2 id="checklist">Checklist rápido</h2>
+      <ul class="checklist-rapido">
+        <li>Definiu o <mark class="amarelo"><strong>font-size</strong></mark> base no body?✅</li>
+        <li>Usou <mark class="amarelo"><strong>em</strong></mark> para títulos (escala relativa)?✅</li>
+        <li>Conferiu contraste de <mark class="amarelo"><strong>color</strong></mark> x <mark class="amarelo"><strong>background-color</strong></mark>?✅</li>
+        <li>Inline só onde <strong>realmente</strong> precisa?✅</li>
+      </ul>
+    </section>
+    <hr>
+    <div class="proxima-aula">
+        <strong>Próxima Aula <br>
+            <a href="treiner-024.html">⬅ <strong>Aula Anterior</strong></a> |
+            <a href="treiner-026.html"><strong>Próxima Aula</strong> ➡</a>
+        </strong>
+    </div>
+    <hr>
+</main>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/byqhpuVpvEI?si=85YP4vcDPUTeT4tc" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    </main><footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','025')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>

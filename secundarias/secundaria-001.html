@@ -1,0 +1,65 @@
+<!-- Página 1 Secundária -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Secundária - Reprodução de Vídeos</title>
+   <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <style>
+    body { 
+      text-align: center; 
+      background: #0a2a2e;
+      color: #00ff0d; 
+      font-family: Arial, sans-serif;
+    }
+    h1, h2 {
+      margin: 20px 0;
+    }
+    iframe { 
+      display: none; 
+      width: 80%; 
+      max-width: 900px;
+      height: 500px; 
+      border: none; 
+      border-radius: 8px;
+      box-shadow: 0 4px 12px #0006;
+    }
+    iframe.active { 
+      display: block; 
+      margin: 20px auto; 
+    }
+    a { 
+      color: rgb(255, 255, 0); 
+      text-decoration: none; 
+      font-weight: bold;
+    }
+    a:hover { 
+      color: #ffffff; 
+      text-shadow: 0 0 6px #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Página de Reprodução de Vídeos</h1>
+
+  <!-- Iframe seguro do YouTube -->
+  <iframe id="video1"
+          src="https://www.youtube.com/embed/jQMbuK6URws"
+          sandbox="allow-scripts allow-same-origin"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+    <p>
+      Curso completo disponível em: <a href="https://www.youtube.com/watch?v=jQMbuK6URws&list=PLHz_AreHm4dm24MhlWJYiR_Rm7TFtvs6S" target="_blank" rel="external noopener noreferrer">Curso em Vídeo</a>
+    </p>
+
+  <hr>
+
+  <!-- Link de volta à galeria -->
+  <h2>
+    <a href="../treiner-024.html">⬅ Voltar à Galeria</a>
+  </h2>
+</body>
+</html>

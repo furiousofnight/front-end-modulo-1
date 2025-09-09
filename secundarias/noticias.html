@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notícia: HTML & CSS — Estado Atual e Motivação</title>
+   <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+</head>
+<body style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#071526; color:#e6f7ff; margin:0; padding:24px; line-height:1.5;">
+
+  <main style="max-width:980px; margin:0 auto; background:linear-gradient(180deg,#07273a 0%, #03121a 100%); border-radius:12px; padding:28px; box-shadow: 0 8px 30px rgba(0,0,0,0.7);">
+    <header style="display:flex; align-items:center; gap:16px; margin-bottom:18px;">
+      <div style="width:68px; height:68px; border-radius:12px; background: linear-gradient(135deg,#00b4d8,#7afcff); display:flex; align-items:center; justify-content:center; font-weight:700; color:#021; font-size:28px;">
+        &lt;/&gt;
+      </div>
+      <div>
+        <h1 style="margin:0; color:#fff; font-size:1.5rem;">Notícias curtas — HTML &amp; CSS (Resumo)</h1>
+        <p style="margin:6px 0 0; color:#bfefff; font-size:0.95rem;">Atualizações e tendências relevantes para quem estuda front-end.</p>
+      </div>
+    </header>
+
+    <!-- Card: notícia -->
+    <section aria-labelledby="news-title" style="background:#082a36; border:1px solid rgba(122,207,255,0.08); padding:18px; border-radius:10px; margin-bottom:18px;">
+      <h2 id="news-title" style="margin:0 0 8px; color:#fff; font-size:1.1rem;">O que há de novo em CSS e no ecossistema web</h2>
+      <p style="margin:0 0 8px;">
+        O desenvolvimento de CSS está acelerando: recursos como <strong>container queries</strong>, <strong>subgrid</strong>, pseudo-classes relacionais (ex.: <code>:has()</code>), cascade layers e melhorias no Grid tornam o design responsivo e modular mais poderoso — recursos já documentados e com adoção crescente em 2024–2025. :contentReference[oaicite:0]{index=0}
+      </p>
+      <p style="margin:0 0 8px;">
+        O W3C mantém atualizações e rascunhos que consolidam novas especificações (ex.: módulos de bordas e decoração de caixas), indicando continuidade na evolução das ferramentas de layout e estilos. :contentReference[oaicite:1]{index=1}
+      </p>
+      <p style="margin:0 0 10px;">
+        Tendências 2025 destacam crescimento de PWA, WebAssembly, e uso de AI/automação nas ferramentas — mas a base (HTML + CSS) segue central para qualquer interface web. :contentReference[oaicite:2]{index=2}
+      </p>
+
+      <footer style="font-size:0.82rem; color:#9fe8ff;">
+        Nota: discussões sobre o papel da IA no futuro do desenvolvimento têm ganhado espaço — isso reforça a importância de dominar os fundamentos (HTML/CSS) para saber usar IA com eficácia, não ser substituído por ela. :contentReference[oaicite:3]{index=3}
+      </footer>
+    </section>
+
+    <!-- Exemplos visuais lado a lado: código e render -->
+    <section aria-labelledby="example-title" style="display:grid; gap:14px; grid-template-columns: 1fr; margin-bottom:18px;">
+      <h2 id="example-title" style="margin:0 0 6px; color:#fff; font-size:1.05rem;">Exemplo prático: small-card com HTML + CSS (código ⇢ resultado)</h2>
+
+      <!-- bloco: código -->
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="flex:1 1 420px; min-width:260px; background:#021826; padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.02);">
+          <h3 style="margin:0 0 8px; color:#9ff7ff; font-size:0.95rem;">Código (HTML)</h3>
+          <pre style="margin:0; background:#00121a; color:#bfefff; padding:10px; border-radius:6px; overflow:auto; font-size:0.88rem;">
+&lt;article class="card"&gt;
+  &lt;h4&gt;CSS: container queries &amp; subgrid&lt;/h4&gt;
+  &lt;p&gt;Novas ferramentas para layouts responsivos mais precisos.&lt;/p&gt;
+&lt;/article&gt;
+          </pre>
+        </div>
+
+        <!-- bloco: render -->
+        <div style="flex:1 1 240px; min-width:200px; background:linear-gradient(180deg,#042f3b,#022029); padding:14px; border-radius:8px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:8px;">
+          <h4 style="margin:0; color:#fff; font-size:0.98rem;">Resultado</h4>
+          <article style="background:#072a34; padding:10px 12px; border-radius:8px; border-left:4px solid #00c3ff;">
+            <h5 style="margin:0 0 6px; color:#eaffff; font-size:0.92rem;">CSS: container queries &amp; subgrid</h5>
+            <p style="margin:0; color:#cfeefb; font-size:0.86rem;">Novas ferramentas que facilitam layouts responsivos por componente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pequeno guia rápido -->
+    <section style="background:linear-gradient(180deg, rgba(2,28,38,0.45), rgba(1,14,20,0.4)); padding:14px; border-radius:8px; margin-bottom:18px;">
+      <h2 style="margin:0 0 8px; color:#fff; font-size:1.05rem;">Guia rápido — o que estudar agora</h2>
+      <ul style="margin:0; padding-left:18px; color:#cfeefb;">
+        <li><strong>HTML semântico:</strong> tags corretas para conteúdo (article, section, header, nav).</li>
+        <li><strong>CSS moderno:</strong> Flexbox, Grid, Container Queries, <code>:has()</code>, cascade layers.</li>
+        <li><strong>Acessibilidade:</strong> leitura por leitores de tela e estrutura lógica de títulos.</li>
+        <li><strong>Prática:</strong> construa pequenos componentes reutilizáveis (cards, menus, formulários).</li>
+      </ul>
+    </section>
+
+    <!-- Mensagem de encorajamento -->
+    <section style="padding:14px; border-radius:8px; background:linear-gradient(90deg,#063644,#01323b); border:1px solid rgba(255,255,255,0.03);">
+      <h2 style="margin:0 0 8px; color:#fff;">Mensagem para quem está começando em Front-End</h2>
+      <p style="margin:0; color:#dff8ff;">
+        Aprender HTML e CSS é construir a base de toda interface — é a habilidade que transforma ideias em experiências visuais.  
+        Seja paciente: pratique desafios pequenos, leia exemplos, copie projetos simples e, sobretudo, repita. A consistência vence a velocidade.
+        Quando surgirem dúvidas complexas, volte ao básico: estrutura, semântica e layout. Você está no caminho certo — continue codando.
+      </p>
+
+      <p style="margin-top:10px; color:#bdf3ff; font-weight:600;">Continue pequeno. Construa sempre. Você vai surpreender a si mesmo.</p>
+    </section>
+
+    <!-- Referências -->
+<footer style="margin-top:16px; font-size:0.9rem; color:#9fe8ff;">
+  <h3 style="margin:0 0 8px; color:#cfeefb;">Fontes e leituras rápidas</h3>
+  <ul style="margin:0; padding-left:18px; list-style:disc;">
+    <li>
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#00e5ff; text-decoration:none;">
+         Documentação sobre container queries — MDN
+      </a>
+    </li>
+    <li>
+      <a href="https://www.w3.org"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#00e5ff; text-decoration:none;">
+         Visão atual das especificações CSS (CSS Snapshot 2025)
+      </a>
+    </li>
+    <li>
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#00e5ff; text-decoration:none;">
+         Artigos sobre novas features CSS (:has, subgrid, etc.)
+      </a>
+    </li>
+    <li>
+      <a href="https://web.dev/learn/"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#00e5ff; text-decoration:none;">
+         Tendências web 2025: PWAs, WebAssembly, AI e mais
+      </a>
+    </li>
+    <li>
+      <a href="https://www.zdnet.com/article/is-ai-the-end-of-programming/"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#00e5ff; text-decoration:none;">
+         Discussões sobre IA e futuro das linguagens tradicionais
+      </a>
+    </li>
+  </ul>
+<div class="proxima-aula" style="margin-top:12px; text-align:center; color:#9fe8ff;">
+  <!-- Botão -->
+  <a href="../treiner-016.html" 
+     style="display:inline-block; padding:8px 16px; background:#eeff02; color:#120a88; 
+            border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s;"><strong>Voltar Para Aula</strong></a>
+</div>
+
+</footer>
+</main>
+
+</body>
+</html>

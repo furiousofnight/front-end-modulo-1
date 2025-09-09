@@ -1,0 +1,855 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00181bc4;
+    color: #ffffff;
+    margin: 20px;
+    line-height: 1.6;
+}
+mark.verde {
+    background-color: #00ff99;
+    color: #000;
+}
+
+mark.amarelo {
+    background-color: #fff200;
+    color: #000;
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth; 
+    scroll-margin-top: 70px;
+}
+
+.centralizado {
+    text-align: center;
+}
+h1, h2, h3, h4, h5{
+    color: yellow;
+    margin-bottom: 16px;  
+    scroll-margin-top: 80px;  
+}
+h2:not(.exemplo-visual) {
+    border-bottom: 2px solid #ff7f50;
+    padding-bottom: 6px;
+    margin-top: 24px;
+}
+
+/* Parágrafos principais (excluindo o rodapé) */
+p:not(.roda-pe p) {
+    margin-bottom: 16px;
+    line-height: 1.7;           
+    font-size: 1.05em;          
+    color: #e6f7ff;             
+    background: rgba(0, 30, 50, 0.2);  
+    padding: 8px 12px;          
+    border-left: 4px solid #ff7f50;
+    border-right: 4px solid #ff7f50;   
+    border-radius: 6px;         
+    text-shadow: 0 1px 2px #0006; 
+    transition: all 0.3s ease;  
+}
+
+p:not(.roda-pe p):hover {
+    background: rgba(0, 30, 50, 0.35);  
+    transform: translateX(2px);         
+}
+
+
+ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: 16px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Blocos explicativos */
+.explicacao {
+    background: #0a2a2e;
+    border: 2px solid #ff7f50;
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin: 24px auto;
+    max-width: 900px;
+    box-shadow: 0 2px 10px #0004;
+    text-align: left;
+}
+
+/* =========================
+   Bloco de código completo - Responsivo
+   ========================= */
+pre {
+    background-color: #0a2a2e;    /* fundo escuro para destacar código */
+    color: #ffffff;               /* texto claro */
+    padding: 16px 20px;           /* espaço interno maior para conforto visual */
+    border-radius: 8px;           /* cantos arredondados */
+    box-shadow: 0 2px 10px #0006; /* sombra leve */
+    line-height: 1.5em;           /* altura da linha consistente */
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;             /* preserva indentação */
+    overflow-x: auto;           /* remove barra horizontal */
+    word-wrap: normal;
+    margin: 20px 0;               /* espaçamento acima e abaixo */
+    font-size: clamp(0.75em, 1vw + 0.5em, 1em); /* ajusta proporcionalmente à tela */
+}
+
+/* Código interno */
+pre code {
+    background: transparent; /* sem fundo adicional */
+    color: inherit;          /* herda cor do pre */
+    padding: 0;
+    border-radius: 0;
+    display: block;
+}
+
+/* Destaques com <mark> dentro do código */
+pre code mark {
+    padding: 2px 4px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+pre mark.verde {
+    background-color: #00ff99;
+    color: #000;
+}
+
+pre mark.amarelo {
+    background-color: #fff200;
+    color: #000;
+    font-weight: bold;
+}
+/* Blocos visuais */
+.exemplo-visual {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.exemplo-visual h2 {
+    border: none;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+.exemplo-visual.verde {
+    background-color: #4cffb3;
+    color: #000;
+}
+.exemplo-visual.amarelo {
+    background-color: #fff700;
+    color: #000;
+}
+.exemplo-visual:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px #0008;
+}
+
+/* Tabela de comparações */
+table {
+      width: 100%;
+      max-width: 900px;
+      margin: 24px auto;
+      border-collapse: collapse;
+      background: #0a2a2e;
+      color: #e6f7ff;
+      box-shadow: 0 2px 12px #0006;
+}
+th, td {
+      border: 2px solid #ff7f50;
+      padding: 8px 12px;
+      text-align: left;
+}
+th {
+      background: #333;
+}
+
+/* Navegação de próxima aula */
+.proxima-aula {
+    background: #1e2d3b;
+    border: 2px solid #1eff00;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 32px auto;
+    max-width: 600px;
+    color: #04fc2d;
+    box-shadow: 0 2px 10px #0005;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.proxima-aula a {
+    color: rgb(237, 253, 14);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+.proxima-aula a:hover {
+    color: #fff;
+    background: #9b04ff;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+/* Ícone redondo */
+.icone-redondo
+        {
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+/* Créditos */
+.creditos {
+    background: #232b36;
+    border: 2px solid #143df0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 32px auto;
+    max-width: 700px;
+    color: #fff;
+    box-shadow: 0 2px 10px #0005;
+    text-align: center;
+}
+
+.creditos a {
+    color: #00e1ff;
+    text-decoration: underline;
+}
+/* Bloco de perfil principal */
+.perfil-bloco {
+    background: #0a2a2e;
+    color: #e6f7ff;
+    padding: 20px;
+    margin: 24px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+.perfil-bloco h2,
+.perfil-bloco h3 {
+    color: #00ffff;
+    margin-top: 50px;
+}
+.perfil-bloco .icone-redondo {
+    float: left;
+    margin: 0 16px 12px 0;
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+.perfil-bloco .redes-sociais {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.perfil-bloco .redes-sociais li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: hsla(177, 88%, 52%, 0.349);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+
+}
+
+.perfil-bloco .redes-sociais li:hover {
+    background: rgba(18, 236, 236, 0.15);
+}
+.perfil-bloco .redes-sociais img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+.perfil-bloco .redes-sociais a {
+    color: #00e1ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.perfil-bloco .redes-sociais a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.perfil-bloco hr {
+    border: none;
+    border-top: 2px solid #f3eeec;
+    margin: 16px 10px 24px 10px;
+    width: 100%;
+    box-shadow: 0 2px 8px #0006;
+}
+.perfil-bloco p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #e6f7ff;
+    background: rgba(0, 30, 50, 0.2);
+    padding: 8px 12px;
+    border-left: 4px solid #ff7f50;
+    border-right: 4px solid #ff7f50;
+    border-radius: 6px;
+    text-shadow: 0 1px 2px #0006;
+    transition: all 0.3s ease;
+}
+.perfil-bloco p:hover {
+    background: rgba(0, 30, 50, 0.35);
+    transform: translateX(2px);
+}
+.perfil-bloco .link-bloco {
+    background-color: #0a2a2e;
+    color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0006;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    line-height: 1.5em;
+    word-wrap: break-word;
+}
+.perfil-bloco .link-bloco a {
+    color: #00e1ff;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.perfil-bloco .link-bloco a:hover {
+    color: #ffdd00;
+    text-shadow: 0 1px 2px #0006;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Estilos para imagens dentro de blocos
+   ========================= */
+.explicacao figure,
+.complemento figure,
+.card figure {
+    text-align: center; /* centraliza o figure e figcaption */
+    margin: 24px auto;
+}
+
+.explicacao figure img,
+.complemento figure img,
+.card figure img {
+    display: block;
+    width: 50%;              /* metade do tamanho do container */
+    max-width: 300px;        /* largura máxima */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;          /* centraliza a imagem */
+}
+
+.explicacao figure img:hover,
+.complemento figure img:hover,
+.card figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   Estilos para imagens dentro de blocos
+   ========================= */
+.explicacao figure,
+.complemento figure,
+.card figure {
+    text-align: center; /* centraliza o figure e figcaption */
+    margin: 24px auto;
+}
+
+.explicacao figure img,
+.complemento figure img,
+.card figure img {
+    display: block;
+    width: 50%;              /* metade do tamanho do container */
+    max-width: 300px;        /* largura máxima */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;          /* centraliza a imagem */
+}
+
+.explicacao figure img:hover,
+.complemento figure img:hover,
+.card figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   Galeria de imagens
+   ========================= */
+.galeria-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 32px 0;
+}
+
+.galeria-imagens img {
+    max-width: 220px;
+    flex: 1 1 calc(33% - 20px); /* até 3 imagens por linha com gap */
+    min-width: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-imagens img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   Imagem especial dentro de blocos (explicacao/complemento/card)
+   ========================= */
+.explicacao figure img.img-especial,
+.complemento figure img.img-especial,
+.card figure img.img-especial {
+    display: block;
+    width: 100%;               /* ocupa toda a largura do figure */
+    max-width: 600px;          /* maior que o padrão */
+    min-width: 220px;          /* evita que fique minúscula em telas médias */
+    height: auto;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 3px solid #13e9e9; /* borda colorida */
+    box-shadow: 0 6px 20px rgba(19, 233, 233, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explicacao figure img.img-especial:hover,
+.complemento figure img.img-especial:hover,
+.card figure img.img-especial:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 28px rgba(223, 36, 36, 0.6);
+}
+
+/* =========================
+   Responsividade da galeria
+   ========================= */
+@media (max-width: 768px) {
+    .galeria-imagens img {
+        flex: 1 1 calc(50% - 16px);
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-imagens img {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+}
+
+/* =========================
+   Imagem única isolada (sem relação com blocos)
+   ========================= */
+
+.explicacao figure img.img-unica,
+.complemento figure img.img-unica,
+.card figure img.img-unica,
+img.img-unica {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 220px;
+    height: auto;
+    image-rendering: auto;
+    border-radius: 8px;
+    border: 4px solid #13e9e9;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #0e1a2b;
+    z-index: 1;
+}
+
+.explicacao figure img.img-unica:hover,
+.complemento figure img.img-unica:hover,
+.card figure img.img-unica:hover,
+img.img-unica:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 36px rgba(223, 36, 36, 0.7);
+}
+
+
+/* =========================
+   Vídeos - Solo e Galeria
+   ========================= */
+
+/* Video solo (tag <video>) */
+video {
+    display: block;
+    width: 100%;
+    max-width: 600px;         /* largura máxima */
+    aspect-ratio: 16/9;       /* mantém proporção */
+    height: auto;
+    margin: 16px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    background: #0a2a2e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,255,255,0.25);
+}
+
+/* Galeria de vídeos (tags <video> dentro da galeria) */
+.galeria-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.galeria-videos video {
+    width: 100%;
+    max-width: 320px;        /* largura máxima para cada vídeo */
+    aspect-ratio: 16/9;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    background: #0a2a2e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-videos video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,255,255,0.18);
+}
+
+
+
+/* =========================
+   Iframes (YouTube ou outros)
+   ========================= */
+
+/* Container do iframe */
+.video-iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Estilo do iframe para vídeo único */
+.video-iframe iframe {
+    width: 100%;
+    max-width: 600px;         /* largura máxima */
+    aspect-ratio: 16/9;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+    border: none;
+    background: #0a2a2e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-iframe iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,255,255,0.25);
+}
+
+/* Iframes dentro de galeria */
+.galeria-videos iframe {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 16/9;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border: none;
+    margin: 0 auto;
+    background: #0a2a2e;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-videos iframe:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,255,255,0.18);
+}
+
+/* =========================
+   Responsividade geral
+   ========================= */
+@media (max-width: 768px) {
+    video,
+    .video-iframe iframe,
+    .galeria-videos video,
+    .galeria-videos iframe {
+        width: 95%;
+        max-width: 95vw;
+    }
+}
+
+@media (max-width: 480px) {
+    video,
+    .video-iframe iframe,
+    .galeria-videos video,
+    .galeria-videos iframe {
+        width: 100%;
+        max-width: 100vw;
+    }
+}
+
+
+/* =========================
+   Responsividade geral do site
+   ========================= */
+@media (max-width: 768px) {
+    body {
+        margin: 12px;
+    }
+    .card, .complemento, .explicacao, .proxima-aula, .creditos {
+        padding: 16px;
+        margin: 16px auto;
+        max-width: 95%;
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.1em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .indice-simples {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+    .galeria-imagens img, .galeria-videos video {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3, h4 {
+        font-size: 1em;
+    }
+    .galeria-imagens img, .galeria-videos video {
+        max-width: 90%;
+    }
+}
+/*links bloco*/
+.link-bloco {
+    background-color: #0a2a2e;       /* mesmo fundo do pre e explicacao */
+    color: #ffffff;                  /* texto claro */
+    padding: 16px 20px;              /* espaço interno confortável */
+    border-radius: 8px;              /* cantos arredondados */
+    box-shadow: 0 2px 10px #0006;    /* leve sombra */
+    margin: 20px 0;                  /* espaçamento vertical */
+    font-family: 'Courier New', Courier, monospace; /* mesmo estilo do código */
+    font-size: 0.95em;
+    line-height: 1.5em;
+    word-wrap: break-word;           /* evita overflow */
+}
+
+/* Links internos do bloco */
+.link-bloco a {
+    color: #00e1ff;                  /* destaque azul */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover nos links */
+.link-bloco a:hover {
+    color: #ffdd00;                  /* cor de destaque no hover */
+    text-shadow: 0 1px 2px #0006;
+    transform: translateY(-1px);
+}
+
+/* Responsividade do bloco */
+@media (max-width: 768px) {
+    .link-bloco {
+        padding: 12px 14px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .link-bloco {
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+}
+/* =========================
+   Rodapé - estilo de parágrafo
+   ========================= */
+/* Parágrafo específico do rodapé */
+.roda-pe p {
+    font-size: 0.9em;
+    color: #c8c8c8;
+    text-align: center;
+    margin: 6px 0;
+    line-height: 1.4;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+/* Links dentro do parágrafo do rodapé */
+.roda-pe p a {
+    color: #ffdd00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.roda-pe p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav.navbar {
+    background: #0a2a2e;
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 2px 8px rgba(0, 255, 255, 0.3);
+    padding: 12px 20px;
+    position: sticky;   /* fixa no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+nav.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav.navbar li {
+    display: inline-block;
+}
+
+nav.navbar a {
+    color: #00e1ff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav.navbar a:hover {
+    background: #00ffff22;
+    color: #fff;
+    text-shadow: 0 0 8px #00ffff, 0 0 12px #ff00ff;
+}
+/* Índice simples */
+.indice-simples {
+    width: 100%;
+    max-width: 340px;
+    margin: 32px 0;
+    padding: 0px 18px;
+    background: none;
+    color: #e79039;
+    text-align: left;
+    white-space: nowrap;
+}
+.indice-simples ul {
+    list-style: disc inside;
+    padding-left: 0.5em;
+    margin: 0;
+}
+.indice-simples li {
+    margin: 0;
+}
+.indice-simples a {
+    color: #22f8ff;
+    text-decoration: none;
+    display: inline-block;
+}
+.indice-simples a:hover {
+    text-decoration: underline;
+}
+.indice-simples h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.6em;
+    padding-left: 15px;
+    color: yellow;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+}
+/* Estilo moderno para o player de áudio HTML5 */
+audio {
+    width: 100%;              /* ocupa toda a largura disponível */
+    max-width: 500px;         /* largura máxima */
+    border-radius: 12px;      /* cantos arredondados */
+    box-shadow: 0 4px 12px rgb(223, 36, 36); /* sombra suave */
+    background-color: #0e1a2b; /* fundo escuro */
+    padding: 8px 12px;        /* espaço interno */
+    margin: 12px auto;        /* centraliza horizontalmente */
+    outline: none;            /* remove outline padrão */
+    display: block;           /* garante linha inteira */
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Edge, Safari) */
+audio::-webkit-media-controls-panel {
+    background-color: #13e9e9; /* painel do player */
+    border-radius: 12px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider {
+    filter: hue-rotate(30deg); /* leve destaque nos controles */
+}
+
+/* Galeria de vídeos em grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 700px;
+    margin: auto;
+    align-items: start;
+}
+
+.video-grid a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid #ff7f50;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    background: #000;
+    box-sizing: border-box;
+}
+
+.video-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+}

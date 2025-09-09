@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estilos CSS externos</title>
+  <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar">
+    <ul>
+        <li><a href="apresentacao.html">🏠 Início</a></li>
+        <li><a href="indice-geral.html">📑 Índice Geral De Aulas</a></li>
+        <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','027')">⚖ Política</a></li>
+        <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','027')">👤 Sobre</a></li>
+    </ul>
+    </nav>
+<h1 class="centralizado">📘 Aula 27: Estilos CSS externos 📘</h1>
+<hr>
+
+<!-- O que é CSS externo -->
+<div class="explicacao">
+    <h2>O que é CSS Externo?</h2>
+    <p>
+        CSS externo é uma abordagem onde todos os estilos de uma página HTML são armazenados em um arquivo separado com extensão <mark class="amarelo"><strong> .CSS </strong></mark>. 
+        Esse arquivo é vinculado ao HTML por meio da tag <mark class="verde"><strong>&lt;link&gt;</strong></mark> no <mark class="amarelo"><strong>&lt;head&gt;</strong></mark>. 
+        Essa prática permite <strong>reaproveitamento de estilos</strong>, melhor organização do código e manutenção facilitada em projetos grandes.
+    </p>
+</div>
+<hr>
+<!-- Vantagens -->
+<div class="explicacao">
+    <h2>Vantagens do CSS Externo</h2>
+    <ul>
+        <li>Reutilização em várias páginas, garantindo uniformidade visual.</li>
+        <li>Separação entre conteúdo (HTML) e apresentação (CSS).</li>
+        <li>Facilidade de manutenção: alterar um arquivo afeta todas as páginas vinculadas.</li>
+        <li>Melhora no desempenho, pois o navegador pode cachear o arquivo CSS.</li>
+        <li>Permite colaboração eficiente em equipes, mantendo código organizado.</li>
+    </ul>
+</div>
+<hr>
+<!-- Exemplo prático -->
+<div class="explicacao">
+    <h2>Exemplo Prático: Criando um arquivo CSS externo</h2>
+    <pre><code>/* Arquivo style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00181bc4;
+    color: #ffffff;
+    margin: 20px;
+}
+h1, h2, h3 {
+    color: yellow;
+}
+p {
+    margin-bottom: 16px;
+}
+.exemplo {
+    background-color: #4cffb3;
+    color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+}</code></pre>
+
+    <p>Vinculando ao HTML:</p>
+    <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+</div>
+<hr>
+<!-- Exemplo visual avançado -->
+<div class="explicacao">
+    <h2>Exemplo Visual Interativo</h2>
+    <div class="exemplo-visual verde">
+        Esse bloco é estilizado via CSS externo! Passe o mouse sobre ele para ver o efeito.
+    </div>
+    <div class="exemplo-visual amarelo">
+        Experimente combinar cores, bordas, padding e alinhamento!
+    </div>
+    <pre><code>/* CSS */
+.exemplo-visual {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.exemplo-visual:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px #0008;
+}</code></pre>
+</div>
+<hr>
+<!-- Comparando tipos de CSS -->
+<div class="explicacao">
+    <h2>Comparando CSS: Externo x Interno x Inline</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Vantagens</th>
+            <th>Desvantagens</th>
+        </tr>
+        <tr>
+            <td>Externo</td>
+            <td>Reutilizável, limpo, fácil manutenção</td>
+            <td>Depende de arquivo separado, precisa de link correto</td>
+        </tr>
+        <tr>
+            <td>Interno</td>
+            <td>Rápido para páginas únicas, bom para testes</td>
+            <td>Não reaproveitável, aumenta o tamanho do HTML</td>
+        </tr>
+        <tr>
+            <td>Inline</td>
+            <td>Alteração imediata em um elemento</td>
+            <td>Dificulta manutenção, repete código</td>
+        </tr>
+    </table>
+</div>
+<hr>
+<!-- Aplicando CSS externo em múltiplas páginas -->
+<div class="explicacao">
+    <h2>Reaproveitamento em múltiplas páginas</h2>
+    <p>Um mesmo arquivo CSS externo pode ser usado por diferentes páginas:</p>
+    <pre><code>&lt;!-- Página Principal --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;!-- Página Secundária em uma subpasta ou raíz --&gt;
+&lt;link rel="stylesheet" href="../style.css"&gt;</code></pre>
+</div>
+<hr>
+<!-- Boas práticas -->
+<div class="explicacao">
+    <h2>Dicas e Boas Práticas</h2>
+    <ul>
+        <li>Organize o CSS em seções comentadas para facilitar leitura.</li>
+        <li>Evite duplicar regras; crie classes reutilizáveis.</li>
+        <li>Teste o link do CSS em todas as páginas para garantir carregamento correto.</li>
+        <li>Divida CSS em arquivos temáticos se o projeto for grande.</li>
+        <li>Use nomes consistentes de classes (ex: <code>menu-principal</code>, <code>botao-enviar</code>).</li>
+        <li>Inclua efeitos interativos (hover, transições) para tornar o aprendizado visual mais intuitivo.</li>
+    </ul>
+</div>
+<hr>
+<div class="explicacao">
+    <h2>Nesse botão abaixo você verá uma outra página.</h2>
+    <p>Que vai herdar o estilo do CSS externo usado nessa mesma página.</p>
+    <p class="link-bloco" ><a href="secundarias/estilos-externos.html" target="_blank" rel="noopener noreferrer" class="botao">Ir para Página de Complemento</a></p>
+</div>
+<hr>
+<div class="proxima-aula">
+  <strong>Próxima Aula <br>
+    <a href="treiner-026.html">⬅ <strong>Aula Anterior</strong></a> |
+    <a href="Fim-modulo.html"><strong>Fim Do Modulo</strong> ➡</a>
+  </strong>
+</div>
+<hr>
+
+<div class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>
+    Curso recomendado:
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula referente ao conteúdo acima → 
+    <a href="https://youtu.be/-i1JVMspDJQ?si=nLb5kWOBQsGrFO5Z" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</div>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','027')"><strong>Política de Privacidade</strong></a>
+    </p>
+</footer>
+</body>
+</html>

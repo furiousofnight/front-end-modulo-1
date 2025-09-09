@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>SiteBook - Aula 26: CSS Interno/Local</title>
+  <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #00181bc4;
+      color: #ffffff;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 { color: yellow; }
+
+    /* Estilo para blocos de código */
+    pre {
+      background: #0a2a2e;
+      border: 2px solid #ff7f50;
+      border-radius: 8px;
+      margin: 24px auto;
+      max-width: 900px;
+      box-shadow: 0 2px 12px #0006;
+      text-align: left;
+      padding: 18px 25px; 
+    }
+    code {
+      display: block;
+      color: #e6fffb;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      font-size: 1.08em;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .explicacao-estrutura, .explicacao-secundaria {
+      background: #0a2a2e;
+      border: 2px solid #ff7f50;
+      border-radius: 10px;
+      padding: 22px 28px 18px 28px;
+      margin: 32px auto;
+      max-width: 900px;
+      box-shadow: 0 2px 10px #0004;
+      font-size: 1.08em;
+      text-align: left;
+    }
+    .explicacao-estrutura { color: #e6f7ff; }
+    .explicacao-secundaria { color: #ffeedd; }
+
+    .explicacao-estrutura ol, .explicacao-estrutura ul,
+    .explicacao-secundaria ol, .explicacao-secundaria ul {
+      margin-left: 1.5em;
+      margin-bottom: 0.7em;
+    }
+    .explicacao-estrutura li, .explicacao-secundaria li {
+      margin-bottom: 0.4em;
+    }
+
+    mark.amarelo { background-color: #fff700; padding: 2px 4px; border-radius: 4px; }
+    mark.verde { background-color: #4cffb3; padding: 2px 4px; border-radius: 4px; }
+
+    /* Estilo para tabela de comparação */
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: 24px auto;
+      border-collapse: collapse;
+      background: #0a2a2e;
+      color: #e6f7ff;
+      box-shadow: 0 2px 12px #0006;
+    }
+    th, td {
+      border: 2px solid #ff7f50;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background: #333;
+    }
+
+    /* Exemplos visuais dinâmicos */
+    .exemplo-visual {
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .verde { background-color: #4cffb3; }
+    .amarelo { background-color: #fff700; }
+
+    .proxima-aula {
+      background: #1e2d3b;
+      border: 2px solid #1eff00;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 32px auto;
+      max-width: 600px;
+      color: #04fc2d;
+      box-shadow: 0 2px 10px #0005;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    .proxima-aula a {
+      color: rgb(237, 253, 14);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .proxima-aula a:hover {
+      color: #fff;
+      background: #9b04ff;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+
+    .creditos {
+      background: #232b36;
+      border: 2px solid #143df0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 32px auto;
+      max-width: 700px;
+      color: #fff;
+      box-shadow: 0 2px 10px #0005;
+      text-align: center;
+    }
+    .creditos a {
+      color: #00e1ff;
+      text-decoration: underline;
+    }
+    .creditos a:hover { color: #ffe066; }
+
+    hr {
+      border: none;
+      border-top: 2px solid #f3eeec;
+      margin: 16px 10px 24px 10px;
+      width: 100%;
+      box-shadow: 0 2px 8px #0006;
+    }
+    /*indice simples*/
+    .indice-simples {
+        width: 100%;
+        max-width: 340px;
+        margin: 32px 0 32px 0;
+        padding: 0px 18px 0px 18px;
+        background: none;
+        color: #e79039;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .indice-simples ul {
+        list-style: disc inside;
+        padding-left: 0.5em;
+        margin: 0;
+    }
+    .indice-simples li {
+        margin: 0;
+    }
+    .indice-simples a {
+        color: #22f8ff;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .indice-simples a:hover {
+        text-decoration: underline;
+    }
+    .indice-simples h2 {
+        margin-top: 0.5em;
+        margin-bottom: 0.6em;
+        text-align: left;
+        padding-left: 15px;
+        color: yellow;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: left;
+    }
+  </style>
+</head>
+<body>
+      <!-- Navbar  -->
+    <nav class="navbar">
+    <ul>
+        <li><a href="apresentacao.html">🏠 Início</a></li>
+        <li><a href="indice-geral.html">📑 Índice Geral De Aulas</a></li>
+        <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','026')">⚖ Política</a></li>
+        <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','026')">👤 Sobre</a></li>
+    </ul>
+    </nav>
+
+<h1>📘 Aula 26: Aplicando CSS Interno/Local 📘</h1>
+<hr>
+
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#oque-e-css-interno"><strong>O que é CSS Interno?</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-pratico"><strong>Exemplo Prático</strong></a>
+        </li>
+        <li>
+            <a href="#estrutura-e-visualizacao"><strong>Estrutura & Visualização de Estrutura</strong></a>
+        </li>
+        <li>
+            <a href="#aplicando-cores-e-destaques"><strong>Aplicando Cores & Destaques</strong></a>
+        </li>
+        <li>
+            <a href="#comparando"><strong>Comparando CSS: Interno, Externo & Inline</strong></a>
+        </li>
+        <li>
+            <a href="#pros-e-contras"><strong>Prós e Contras do CSS Interno/Local</strong></a>
+        </li>
+    </ul>
+</nav>
+<div class="explicacao-estrutura">
+  <h2 id="oque-e-css-interno">O que é CSS Interno/Local?</h2>
+  <p>
+    CSS <strong><mark class="amarelo">interno</mark></strong> ou <strong><mark class="amarelo">local</mark></strong> é quando os estilos são aplicados diretamente dentro de uma página HTML, usando a tag <strong><mark class="verde">&lt;style&gt;</mark></strong> no <strong><mark class="verde">&lt;head&gt;</mark></strong>.  
+    Isso permite que cada página tenha um estilo específico e independente de outros arquivos, tornando a alteração mais rápida e prática em projetos pequenos ou testes.
+  </p>
+
+  <h3 id="exemplo-pratico">Exemplo Prático:</h3>
+  <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: antiquewhite;
+      font-family: Arial, sans-serif;
+      text-align: justify;
+      color: #333;
+    }
+    h1 { color: blue; text-align: center; }
+    h2 { color: green; }
+    p { margin-bottom: 16px; }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+  <p>
+    Esse exemplo mostra como aplicar diferentes estilos para <strong>body</strong>, títulos e parágrafos diretamente no documento HTML, sem depender de CSS externo.
+  </p>
+
+  <h3>Dicas Profissionais:</h3>
+  <ul>
+    <li>
+      Use CSS interno em projetos pequenos ou páginas únicas.
+    </li>
+    <li>
+      Evite para projetos grandes, pois dificulta manutenção e reutilização.
+    </li>
+    <li>
+      Combine com comentários explicativos para facilitar a leitura do código.
+    </li>
+  </ul>
+</div>
+<hr>
+
+<div class="explicacao-secundaria">
+  <h2 id="estrutura-e-visualizacao">Estrutura e Visualização de Estrutura</h2>
+  <p>
+    É possível definir estilos individuais para cada tipo de título <mark class="amarelo"><strong>(&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;)</strong></mark> e parágrafo <mark class="amarelo"><strong>(&lt;p&gt;)</strong></mark>. Além de cores, é possível controlar <strong>alinhamento</strong>, <strong>margens</strong>, <strong>padding</strong> e <strong>espessura de borda</strong> para cada elemento.
+  </p>
+
+  <h3>Exemplo Visual:</h3>
+  <div class="exemplo-visual verde">
+    Este parágrafo está estilizado com CSS interno! (verde)
+  </div>
+  <pre><code>div { background-color:#4cffb3; color:#000; text-align:center; padding:12px; border-radius:6px; }</code></pre>
+</div>
+<hr>
+
+<div class="explicacao-estrutura">
+  <h2 id="aplicando-cores-e-destaques">Aplicando Cores e Destaques</h2>
+  <p>
+    As cores ajudam a organizar visualmente a página. Utilize <strong><mark class="verde">verde</mark></strong> para destacar conceitos importantes e <strong><mark class="amarelo">amarelo</mark></strong> para observações, tornando o conteúdo mais didático e fácil de memorizar.
+  </p>
+
+  <h3>Exemplo Prático:</h3>
+  <div class="exemplo-visual amarelo">
+    CSS <mark class="verde">interno</mark> é rápido para pequenas páginas.
+  </div>
+  <div class="exemplo-visual verde">
+    Use <mark class="amarelo">marcação</mark> para destacar informações importantes.
+  </div>
+  <pre><code>&lt;p&gt;CSS &lt;mark class="verde"&gt;interno&lt;/mark&gt; é rápido para pequenas páginas.&lt;/p&gt;
+&lt;p&gt;Use &lt;mark class="amarelo"&gt;marcação&lt;/mark&gt; para destacar informações importantes.&lt;/p&gt;</code></pre>
+</div>
+<hr>
+
+<div class="explicacao-secundaria">
+  <h2 id="comparando">Comparando CSS: Interno x Externo x Inline</h2>
+  <table>
+    <tr>
+      <th>Tipo</th>
+      <th>Vantagens</th>
+      <th>Desvantagens</th>
+    </tr>
+    <tr>
+      <td>Interno/Local</td>
+      <td>Rápido para páginas únicas, fácil de testar</td>
+      <td>Dificulta manutenção em projetos grandes, não reutilizável</td>
+    </tr>
+    <tr>
+      <td>Externo</td>
+      <td>Reutilizável em várias páginas, fácil de manter</td>
+      <td>Depende de arquivo separado, alterações rápidas exigem recarregar o CSS</td>
+    </tr>
+    <tr>
+      <td>Inline</td>
+      <td>Alteração imediata no elemento, útil para testes rápidos</td>
+      <td>Dificulta manutenção, repete código e polui o HTML</td>
+    </tr>
+  </table>
+
+  <h3>Boas Práticas:</h3>
+  <ul>
+    <li>
+      Prefira CSS externo em projetos grandes para manter o código limpo.
+    </li>
+    <li>
+      Use CSS interno para protótipos ou páginas isoladas.
+    </li>
+    <li>
+      Inline deve ser usado apenas para testes ou ajustes muito específicos.
+    </li>
+    <li>
+      Comente seu código para facilitar entendimento de futuros desenvolvedores.
+    </li>
+  </ul>
+</div>
+<hr>
+
+<div class="explicacao-estrutura">
+  <h2 id="pros-e-contras">Prós e Contras do CSS Interno/Local</h2>
+  <h3>Prós:</h3>
+  <ul>
+    <li>
+      Permite alterações rápidas em páginas únicas.
+    </li>
+    <li>
+      Ótimo para prototipagem ou testes de layout.
+    </li>
+    <li>
+      Permite aprendizado didático do CSS sem depender de arquivos externos.
+    </li>
+  </ul>
+  <h3>Contras:</h3>
+  <ul>
+    <li>
+      Não é reutilizável em múltiplas páginas.
+    </li>
+    <li>
+      Dificulta manutenção em projetos maiores.
+    </li>
+    <li>
+      Pode gerar repetição de código e aumentar o tamanho da página.
+    </li>
+  </ul>
+</div>
+<hr>
+
+<div class="proxima-aula">
+  <strong>Próxima Aula <br>
+    <a href="treiner-025.html">⬅ <strong>Aula Anterior</strong></a> |
+    <a href="treiner-027.html"><strong>Próxima Aula</strong> ➡</a>
+  </strong>
+</div>
+<hr>
+
+<div class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>
+    Curso recomendado:
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula referente ao conteúdo acima → 
+    <a href="https://youtu.be/fzyab4P2pn8?si=quL1OubeuRgGdcPp" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</div>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','026')"><strong>Política de Privacidade</strong></a>
+    </p>
+</footer>
+</body>
+</html>
+
