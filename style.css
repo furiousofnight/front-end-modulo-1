@@ -726,6 +726,21 @@ video:hover {
     text-decoration: underline;
 }
 
+/* Rodapé responsivo para dispositivos móveis */
+@media (max-width: 600px) {
+    .roda-pe {
+        padding-bottom: 60px; /* Espaço extra para não sobrepor botões */
+    }
+    .roda-pe p {
+        font-size: 1em;
+        margin-bottom: 12px;
+    }
+    footer {
+        position: static !important;
+        margin-top: 32px !important;
+        padding-bottom: 16px !important;
+    }
+}
 nav.navbar {
     background: #0a2a2e;
     border-bottom: 2px solid #00ffff;
