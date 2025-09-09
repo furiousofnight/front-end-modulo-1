@@ -10,7 +10,7 @@ Este repositório reúne páginas, exercícios, exemplos e recursos multimídia 
 ## 📂 Estrutura do Projeto
 
 ### Páginas Principais
-- `apresentacao.html` – Introdução ao módulo e boas-vindas.
+- `index.html` – Introdução ao módulo e boas-vindas.
 - `Fim-modulo.html` – Encerramento e conclusão do módulo.
 - `indice-geral.html` – Índice geral para navegação entre as aulas.
 - `politica.html` – Informações sobre política de uso.
