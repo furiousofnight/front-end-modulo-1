@@ -745,45 +745,38 @@ nav.navbar {
     background: #0a2a2e;
     border-bottom: 2px solid #00ffff;
     box-shadow: 0 2px 8px rgba(0, 255, 255, 0.3);
-    padding: 4px 10px; /* mais fino */
-    position: sticky;
+    padding: 12px 20px;
+    position: sticky;   /* fixa no topo ao rolar */
     top: 0;
     z-index: 1000;
 }
+
 nav.navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 12px; /* ainda mais compacto */
-    flex-wrap: wrap; /* permite quebrar linha se não couber */
+    gap: 24px;
 }
+
 nav.navbar li {
     display: inline-block;
 }
+
 nav.navbar a {
     color: #00e1ff;
     font-weight: bold;
     text-decoration: none;
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    font-size: 0.95rem; /* levemente menor */
-    white-space: nowrap; /* evita quebra de texto */
 }
-@media (max-width: 600px) {
-    nav.navbar ul {
-        gap: 6px;
-        flex-wrap: wrap;
-    }
-    nav.navbar {
-        padding: 2px 4px;
-    }
-    nav.navbar a {
-        font-size: 0.92rem;
-        padding: 6px 10px;
-    }
+
+nav.navbar a:hover {
+    background: #00ffff22;
+    color: #fff;
+    text-shadow: 0 0 8px #00ffff, 0 0 12px #ff00ff;
 }
 /* Índice simples */
 .indice-simples {
