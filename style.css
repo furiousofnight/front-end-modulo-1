@@ -779,12 +779,11 @@ nav.navbar a:hover {
     text-shadow: 0 0 8px #00ffff, 0 0 12px #ff00ff;
 }
 
-
 /* Índice simples */
 .indice-simples {
     width: 100%;
     max-width: 340px;
-    margin: 32px 0;
+    margin: 31px 0;
     padding: 0px 18px;
     background: none;
     color: #e79039;
