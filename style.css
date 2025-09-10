@@ -132,7 +132,7 @@ nav.navbar a {
     color: var(--cor-principal);
     font-weight: bold;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
     transition: all 0.3s ease;
     border: 1px solid var(--cor-navbar-border-hover);
@@ -465,7 +465,7 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
 
 @media (max-width: 768px) {
     body { margin: 12px; }
-    nav.navbar { padding: 8px 12px; }
+    nav.navbar { padding: 6px 12px; }
     nav.navbar ul {
         flex-wrap: nowrap;
         gap: 8px;
@@ -475,7 +475,7 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
         padding-bottom: 4px;
     }
     nav.navbar li { flex: 0 0 auto; }
-    nav.navbar a { display: inline-block; white-space: nowrap; padding: 8px 12px; font-size: 0.95em; }
+    nav.navbar a { display: inline-block; white-space: nowrap; padding: 6px 12px; font-size: 0.85em; }
     .proxima-aula { padding: 12px 10px; }
     .proxima-aula a { padding: 6px 12px; font-size: 0.95em; flex-shrink: 0; }
     h1, h2, h3, h4 { font-size: 1.1em; }
