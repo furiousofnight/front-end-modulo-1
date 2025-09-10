@@ -504,6 +504,14 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
     pre { font-size: 10px; }
 }
 
+@media (max-width: 768px) {
+    .roda-pe p {
+        font-size: 0.75em; /* menor fonte */
+        margin: 2px 0;      /* menos margem */
+        line-height: 1.2;   /* menor espaçamento */
+    }
+}
+
 /* =========================
    10. Classes utilitárias
    ========================= */

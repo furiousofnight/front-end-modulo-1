@@ -124,18 +124,35 @@
         }
 
         /* Rodapé fixado na parte inferior */
-        footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-            padding: 20px;
-            margin-top: 50px;
-            background: linear-gradient(to top, rgba(15, 15, 15, 1), rgba(15, 15, 15, 0));
-        }
+        /* Rodapé fixado na parte inferior */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    padding: 20px;
+    margin-top: 50px;
+    background: linear-gradient(to top, rgba(15, 15, 15, 1), rgba(15, 15, 15, 0));
+}
+
+/* Rodapé responsivo para telas menores */
+@media (max-width: 768px) {
+    footer {
+        padding: 8px 5px;      /* menos espaço interno */
+        font-size: 0.75rem;    /* fonte menor */
+        margin-top: 20px;      /* reduz a distância do conteúdo acima */
+    }
+
+    .roda-pe p {
+        font-size: 0.75em;     /* texto menor */
+        margin: 2px 0;         /* menos margem vertical */
+        line-height: 1.2;      /* menos espaçamento entre linhas */
+    }
+}
+
     </style>
 </head>
 <body>
