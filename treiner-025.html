@@ -23,13 +23,10 @@
     <h2>Índice</h2>
     <ul>
         <li>
-            <a href="#o-que-e-estilo-inline"><strong>O que é estilo inline?</strong></a>
+            <a href="#estilo-inline"><strong>O que é estilo inline?</strong></a>
         </li>
         <li>
-            <a href="#exemplo-base-inline"><strong>Código Base Usando Estilo Inline</strong></a>
-        </li>
-        <li>
-            <a href="#o-que-cada-prioridade-faz"><strong>O que cada propriedade está fazendo</strong></a>
+            <a href="#propriedades"><strong>propriedades Inline</strong></a>
         </li>
         <li>
             <a href="#boas-praticas"><strong>Boas práticas quando usar inline</strong></a>
@@ -45,41 +42,17 @@
     </nav>
 <hr>
     <section class="explicacao">
-      <h2 id="o-que-e-estilo-inline">O que é estilo inline?</h2>
+      <h2 id="estilo-inline">O que é estilo inline?</h2>
       <p>
           Estilo <mark class="amarelo"><strong>inline</strong></mark> é quando você aplica CSS diretamente na tag, usando o atributo <strong>
               <mark class="amarelo">style="…"</mark>
           </strong>. É rápido para demonstrar e testar.
       </p>
     </section>
-
     <hr>
 
     <section class="explicacao">
-      <h2>Código Base Exemplo: Usando Estilo Inline</h2>
-      
-<pre><code>
-  &lt;body style="<mark class="amarelo"><strong>background-color</strong></mark>: <mark class="verde"><strong>rgb(7, 39, 49)</strong></mark>
-  ; <mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>margin</strong></mark>: <mark class="verde"><strong>20px</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>20px</strong></mark>;"&gt;
-  &lt;h1 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>aqua</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.5em</strong></mark>;"&gt;Capitulo 1&lt;/h1&gt;
-  &lt;h2 style="<mark class="amarelo"><strong>color:</strong></mark><mark class="verde"><strong>rgb(165, 30, 255);</strong></mark> <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 1.1&lt;/h2&gt;
-  &lt;p style="<mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(255, 255, 255)</strong></mark>
-  <mark class="amarelo"><strong>text-align</strong></mark>: <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/p&gt;
-  &lt;h2 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(165, 30, 255)</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 1.2&lt;/h2&gt;&lt;p style="
-  <mark class="amarelo"><strong>font-family</strong></mark>:<mark class="verde"><strong>Arial, sans-serif</strong></mark>;<mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>:<mark class="verde"><strong>rgb(255, 255, 255):;</strong></mark>
-  <mark class="amarelo"><strong>text-align</strong></mark>: <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/p&gt;
-  &lt;h1 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>aqua</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.5em</strong></mark>;"&gt;Capitulo 2&lt;/h1&gt;
-  &lt;h2 style="<mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(165, 30, 255)</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.2em</strong></mark>;"&gt;Capitulo 2.1&lt;/h2&gt;
-  &lt;P style="<mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark>; <mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark>; <mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(255, 255, 255)</strong></mark>
-  <mark class="amarelo"><strong>text-align:</strong></mark> <mark class="verde"><strong>justify</strong></mark>;"&gt;Lorem ipsum…&lt;/P&gt;
-  &lt;/body&gt;
-
-</pre></code>
-    </section>
-    <hr>
-
-    <section class="explicacao">
-      <h2>O que cada propriedade está fazendo</h2>
+      <h2 id="propriedades">Podemos Usar Essas Propriedades Inline</h2>
       <h3><strong>&lt;body style="…"&gt;</strong></h3>
       <ul>
         <li>

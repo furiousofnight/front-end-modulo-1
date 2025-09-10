@@ -61,7 +61,9 @@ Primeira forma: simples mas limitada:
 
 <h3>Estrutura usada acima</h3>
 <p>
-<strong></strong><mark class="amarelo">&lt;audio src="midia/seu-audio.mp3" controls autoplay&gt;&lt;/audio&gt;</mark></strong>
+<pre><code><strong><mark class="amarelo">&lt;audio src="midia/seu-audio.mp3" controls&gt;&lt;/audio&gt;</mark></strong>
+
+</code></pre>
 </p>
 </div>
 <hr>
@@ -81,9 +83,6 @@ Primeira forma: simples mas limitada:
 <code>
     <mark class="verde"><strong>controls</strong></mark>
 </code> → mostra os controles de reprodução do navegador (botão play, barra de progresso, volume).
-</li>
-<li>
-<mark class="verde"><strong><code>autoplay</code></strong></mark> → faz com que o áudio comece automaticamente assim que a página é carregada.
 </li>
 </ol>
 <h4>Limitações</h4>
@@ -132,9 +131,6 @@ Não oferece alternativas se o áudio falhar.
     <mark class="verde"><code><strong>preload="metadata"</strong></code></mark> → carrega apenas as informações do arquivo (como duração), <br>mas não baixa o áudio inteiro até que o usuário dê play (economiza dados).
 </li>
 <li>
-    <mark class="verde"><code><strong>autoplay</strong></code></mark> → inicia o áudio automaticamente.
-</li>
-<li>
     <mark class="verde"><code><strong>controls</strong></code></mark> → mostra os botões de controle.
 </li>
 <li>
@@ -146,13 +142,18 @@ Não oferece alternativas se o áudio falhar.
 <p>Cada navegador suporta melhor determinados formatos de áudio. Para garantir compatibilidade, usamos várias opções:</p>
 <ul>
 <li>
-    <mark class="verde"><strong><code>&lt;source src="midia/seu-audio.mp3" type="audio/mpeg"&gt;</code></strong></mark> → formato MP3 com <mark class="amarelo"><strong>audio/mpeg</strong></mark> no type, amplamente suportado.
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.mp3" type="audio/mpeg"&gt;</strong></mark>
+    </code></pre> → formato MP3 com <mark class="amarelo"><strong>audio/mpeg</strong></mark> no type, amplamente suportado.
 </li>
+<hr>
 <li>
-    <mark class="verde"><code><strong>&lt;source src="midia/seu-audio.ogg" type="audio/ogg"&gt;</strong></code></mark> → formato OGG com <mark class="amarelo"><strong>audio/ogg</strong></mark> no type, comum em navegadores livres como Firefox.
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.ogg" type="audio/ogg"&gt;</strong></mark>
+    </code></pre> → formato OGG com <mark class="amarelo"><strong>audio/ogg</strong></mark> no type, comum em navegadores livres como Firefox.
 </li>
+<hr>
 <li>
-    <mark class="verde"><code><strong>&lt;source src="midia/seu-audio.wav" type="audio/wav"&gt;</strong></code></mark> → formato WAV com <strong><mark class="amarelo">audio/wav</mark></strong> no type, alta qualidade, mas arquivos pesados.
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.wav" type="audio/wav"&gt;</strong></mark> 
+    </code></pre>→ formato WAV com <strong><mark class="amarelo">audio/wav</mark></strong> no type, alta qualidade, mas arquivos pesados.
 </li>
 </ul>
 <p>O navegador tentará reproduzir o primeiro formato que conseguir reconhecer.</p>

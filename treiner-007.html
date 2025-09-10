@@ -85,15 +85,15 @@
     <section class="explicacao">
     <h3 id="exemplo-outros-formatos">Exemplo com outros formatos de favicon</h3>
 <pre><code>
-        <mark class="amarelo">&lt;!-- PNG para navegadores modernos --&gt;</mark>
-    <strong><mark class="verde">&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;</mark>
-    </strong>
-        <mark class="amarelo">&lt;!-- SVG para alta resolução --&gt;</mark>
-    <strong><mark class="verde">&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</mark>
-    </strong>
-        <mark class="amarelo">&lt;!-- Fallback para Internet Explorer --&gt;</mark>
-    <strong></strong><mark class="verde">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</mark>
-    </strong>
+    <mark class="amarelo">&lt;!-- PNG para navegadores modernos --&gt;</mark>
+<strong><mark class="verde">&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;</mark>
+</strong>
+    <mark class="amarelo">&lt;!-- SVG para alta resolução --&gt;</mark>
+<strong><mark class="verde">&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</mark>
+</strong>
+    <mark class="amarelo">&lt;!-- Fallback para Internet Explorer --&gt;</mark>
+<strong></strong><mark class="verde">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</mark></strong>
+
 </pre></code>
     <ul>
         <li>
@@ -142,15 +142,16 @@
         <h2 id="explicacao-atributos">Explicação dos principais atributos da tag <mark class="amarelo"><strong>&lt;link&gt;</strong></mark> do favicon</h2>
         <ul>
             <li>
-                <strong>rel</strong>: Define o tipo de relação do arquivo <mark class="verde"><strong>("icon", "shortcut icon")</strong></mark>.
+                <strong>rel</strong>: Define o tipo de relação do arquivo 
+                <pre><code></code><b><mark class="verde"><strong>("icon", "shortcut icon")</strong></mark></b></code></pre>
             </li>
             <li>
-                <strong>type</strong>: O tipo MIME do arquivo <mark class="verde"><strong>(ex: image/x-icon, image/png, image/svg+xml)</strong></mark>
+                <strong>type</strong>: O tipo MIME do arquivo
+                <pre><code><mark class="verde"><strong>(ex: image/x-icon, image/png, image/svg+xml)</strong></mark></code></pre>
             </li>
             <li>
-                <strong>sizes</strong>: Tamanho do ícone <strong>
-                    <mark class="verde">(ex: 16x16, 32x32, 180x180 para Apple Touch Icon)</mark>
-                </strong>.
+                <strong>sizes</strong>: Tamanho do ícone 
+    <pre><code><strong><mark class="verde">(ex: 16x16, 32x32, 180x180 para Apple Touch Icon)</mark></strong></code></pre>
             </li>
             <li>
                 <strong>href</strong>: Caminho para o arquivo do favicon.
