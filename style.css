@@ -113,42 +113,38 @@ li {
 /* =========================
    3. Navegação
    ========================= */
-nav.navbar {
-    background: rgba(10, 42, 46, 0.95);
-    padding: 12px 10px; /* reduzido para dar espaço no mobile */
-    position: sticky;
-    top: 0;
+nav.navbar { 
+    background: rgba(10, 42, 46, 0.95); 
+    padding: 12px 20px; 
+    position: sticky; 
+    top: 0; 
     z-index: 1000;
-    transition: all 0.3s ease;
-    border: 1px solid #00ffff;
-    border-radius: 4px;
+    transition: all 0.3s ease; 
+    border: 1px solid #00ffff; 
+    border-radius: 4px; 
 }
-
-nav.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between; /* distribui igualmente */
-    gap: 8px; /* gap reduzido para não estourar no celular */
-    flex-wrap: nowrap; /* mantém tudo em uma linha */
-}
-
-nav.navbar li {
-    flex: 1; /* 🔑 cada item ocupa parte igual da largura */
-}
-
-nav.navbar a {
-    display: block;           /* ocupa todo o espaço do li */
-    text-align: center;       /* centraliza o texto */
-    color: #00e1ff;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 8px 0;           /* padding só vertical */
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    border: 1px solid #00ffff50;
-    font-size: clamp(12px, 2.5vw, 16px); /* 🔑 fonte que se ajusta no mobile */
+nav.navbar ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 24px; 
+} nav.navbar li { 
+    display: inline-block; 
+    position: relative; 
+} nav.navbar a { 
+    color: #00e1ff; 
+    font-weight: bold; 
+    text-decoration: none; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    transition: all 0.3s ease; 
+    border: 1px solid #00ffff50; 
+} nav.navbar a:hover { 
+    background: rgba(0, 255, 255, 0.1); 
+    color: #fff; 
+    border-color: #00ffff; 
 }
 
 nav.navbar a:hover {
