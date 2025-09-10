@@ -80,159 +80,161 @@
         &lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg" alt="Vídeo 4" width="300"&gt;
     &lt;/a&gt;
 &lt;/div&gt;
+
 </pre></code>
 <hr>
-        <h3 id="explicacao-principal">Explicação Sobre a Estrutura Acima</h3>
-        <ol>
-        <li>
-            Estrutura do HTML
-            <ul type="disc" >
-                <li>
-                    Usamos <strong><mark class="amarelo">&lt;div class="video-grid"&gt;</mark></strong> para criar uma grade de vídeos.
-                </li>
-                <li>
-                    Usamos <strong><mark class="amarelo">&lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-1.html?id=video1"&gt;</mark></strong> para criar um link para a página secundária que contém o vídeo.
-                </li>
-                <li>
-                    Usamos <strong><mark class="amarelo">&lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg"&gt;</mark></strong> para exibir a miniatura do vídeo.
-                </li>
-                <li>
-                    <mark class="amarelo"><strong>alt="Vídeo 1"</strong></mark> → texto alternativo, importante para acessibilidade (leitores de tela).
-                </li>
-                <li>
-                    <mark class="amarelo"><strong>width="300"</strong></mark> → define a largura da miniatura em pixels.
-                </li>
-            </ul>
-        </li>
-        <li>
-            Funcionamento passo a passo
-            <ul type="disc">
-                <li>
-                    A página principal mostra uma grade de miniaturas.
-                </li>
-                <li>
-                    Cada miniatura está dentro de um link <mark class="verde"><strong>&lt;a&gt;</strong></mark>.
-                </li>
-                <li>
-                    Quando o usuário clica na imagem, ele é redirecionado para a página secundária correspondente, onde o vídeo é reproduzido dentro de um <mark class="verde"><strong>&lt;iframe&gt;</strong></mark>.
-                </li>
-                <li>
-                    A classe <mark class="verde"><strong>?id=video1</strong></mark> na URL pode ser usada para identificar qual vídeo carregar (útil se você usar JavaScript ou back-end no futuro).
-                </li>
-            </ul>
-        </li>
-        <li>
-            Estilo e organização
-            <ul type="disc">
-                <li>
-                    A classe <mark class="verde"><strong>.video-grid</strong></mark> normalmente usa CSS Grid ou Flexbox para organizar os vídeos em linhas e colunas.
-                </li>
-                <li>
-                    Isso mantém a galeria visualmente organizada mesmo em telas diferentes.
-                </li>
-                <li>
-                    O CSS também pode adicionar espaçamento (gap), bordas, sombras e efeitos ao passar o mouse.
-                </li>
-            </ul>
-        </li>
-        <li>
-            Por que isso é útil no aprendizado
-            <ul type="disc">
-                <li>
-                    Permite aplicar conceitos de HTML: <mark class="verde"><strong>&lt;div&gt;</strong></mark>, <mark class="verde"><strong>&lt;a&gt;</strong></mark>, <mark class="verde"><strong>&lt;img&gt;</strong></mark>.
-                </li>
-                <li>
-                    Introduz links internos e parâmetros na URL <mark class="verde"><strong>(?id=video1)</strong></mark>.
-                </li>
-                <li>
-                    Ensina estrutura de grade com CSS.
-                </li>
-                <li>
-                    Cria uma experiência prática de navegação entre páginas.
-                </li>
-            </ul>
-        </li>
-        </ol>
-    </div>
+<h3 id="explicacao-principal">Explicação Sobre a Estrutura Acima</h3>
+<ol>
+<li>
+Estrutura do HTML
+<ul type="disc" >
+    <li>
+        Usamos <strong><mark class="amarelo">&lt;div class="video-grid"&gt;</mark></strong> para criar uma grade de vídeos.
+    </li>
+    <li>
+        Usamos <strong><mark class="amarelo">&lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-1.html?id=video1"&gt;</mark></strong> para criar um link para a página secundária que contém o vídeo.
+    </li>
+    <li>
+        Usamos <strong><mark class="amarelo">&lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg"&gt;</mark></strong> para exibir a miniatura do vídeo.
+    </li>
+    <li>
+        <mark class="amarelo"><strong>alt="Vídeo 1"</strong></mark> → texto alternativo, importante para acessibilidade (leitores de tela).
+    </li>
+    <li>
+        <mark class="amarelo"><strong>width="300"</strong></mark> → define a largura da miniatura em pixels.
+    </li>
+</ul>
+</li>
+<li>
+Funcionamento passo a passo
+<ul type="disc">
+    <li>
+        A página principal mostra uma grade de miniaturas.
+    </li>
+    <li>
+        Cada miniatura está dentro de um link <mark class="verde"><strong>&lt;a&gt;</strong></mark>.
+    </li>
+    <li>
+        Quando o usuário clica na imagem, ele é redirecionado para a página secundária correspondente, onde o vídeo é reproduzido dentro de um <mark class="verde"><strong>&lt;iframe&gt;</strong></mark>.
+    </li>
+    <li>
+        A classe <mark class="verde"><strong>?id=video1</strong></mark> na URL pode ser usada para identificar qual vídeo carregar (útil se você usar JavaScript ou back-end no futuro).
+    </li>
+</ul>
+</li>
+<li>
+Estilo e organização
+<ul type="disc">
+    <li>
+        A classe <mark class="verde"><strong>.video-grid</strong></mark> normalmente usa CSS Grid ou Flexbox para organizar os vídeos em linhas e colunas.
+    </li>
+    <li>
+        Isso mantém a galeria visualmente organizada mesmo em telas diferentes.
+    </li>
+    <li>
+        O CSS também pode adicionar espaçamento (gap), bordas, sombras e efeitos ao passar o mouse.
+    </li>
+</ul>
+</li>
+<li>
+Por que isso é útil no aprendizado
+<ul type="disc">
+    <li>
+        Permite aplicar conceitos de HTML: <mark class="verde"><strong>&lt;div&gt;</strong></mark>, <mark class="verde"><strong>&lt;a&gt;</strong></mark>, <mark class="verde"><strong>&lt;img&gt;</strong></mark>.
+    </li>
+    <li>
+        Introduz links internos e parâmetros na URL <mark class="verde"><strong>(?id=video1)</strong></mark>.
+    </li>
+    <li>
+        Ensina estrutura de grade com CSS.
+    </li>
+    <li>
+        Cria uma experiência prática de navegação entre páginas.
+    </li>
+</ul>
+</li>
+</ol>
+</div>
 <hr>
-    <section class="explicacao">
-        
-            <h3 id="exemplo-secundarias">Exemplo: Estrutura Usada & Replicada nas Páginas Secundárias</h3>
-            <pre><code>
-                &lt;iframe id="video1"
-                src="https://youtube.com/embed/ID-DO-VIDEO"
-                class="active" allow="accelerometer; autoplay;
-                clipboard-write; encrypted-media; gyroscope;
-                picture-in-picture" allowfullscreen&gt;
-                &lt;/iframe&gt;
-                &lt;hr&gt;
-                &lt;h2&gt;&lt;a href="../seu.html"&gt;⬅ Voltar à Galeria&lt;/a&gt;&lt;/h2&gt;
-            </pre></code>
-        <hr>
-            <h4 id="explicacao-secundarias">Explicação da Estrutura Secundária Usada</h4>
-            <ol>
-            <li>
-                Estrutura do iframe
-                <ul type="square">
-                    <li>
-                        Usamos <mark class="verde"><strong>&lt;iframe&gt;</strong></mark> para incorporar conteúdo externo dentro da página, neste caso, o player do YouTube.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>id="video1"</strong></mark> → identifica o iframe, permitindo manipulação via CSS ou JavaScript.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>src="https://www.youtube.com/embed/jQMbuK6URws"</strong></mark> → define a URL do vídeo incorporado; o código final é o ID do vídeo no YouTube.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>sandbox="allow-scripts allow-same-origin"</strong></mark> → adiciona restrições de segurança, permitindo apenas scripts internos do YouTube e acesso ao próprio domínio.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>class="active"</strong></mark> → define uma classe CSS para controlar estilo ou visibilidade do iframe.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</strong></mark> → habilita recursos extras do player, como autoplay e picture-in-picture.
-                    </li>
-                    <li>
-                        <mark class="amarelo"><strong>allowfullscreen</strong></mark> → permite que o vídeo seja exibido em tela cheia.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Funcionamento do iframe
-                <ul type="square">
-                    <li>
-                        O iframe carrega o vídeo dentro da própria página, permitindo que o usuário assista sem sair do site.
-                    </li>
-                    <li>
-                        O botão do YouTube no player já permite abrir o vídeo diretamente no site do YouTube.
-                    </li>
-                    <li>
-                        A classe <mark class="verde"><strong>active</strong></mark> pode ser usada para mostrar ou esconder o vídeo dinamicamente via CSS ou JavaScript.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Segurança e boas práticas
-                <ul type="square">
-                    <li>
-                        Sempre use URLs confiáveis no <mark class="verde"><strong>src</strong></mark>, como o embed oficial do YouTube.
-                    </li>
-                    <li>
-                        O atributo <mark class="verde"><strong>sandbox</strong></mark> ajuda a proteger seu site contra scripts externos maliciosos.
-                    </li>
-                    <li>
-                        Não é necessário usar <mark class="verde"><strong>target="_blank"</strong></mark> ou <mark class="verde"><strong>rel</strong></mark> no iframe; essas propriedades só funcionam em links.
-                    </li>
-                </ul>
-            </li>
-            </ol>
-    </section>
+<section class="explicacao">
+
+<h3 id="exemplo-secundarias">Exemplo: Estrutura Usada & Replicada nas Páginas Secundárias</h3>
+<pre><code>
+&lt;iframe id="video1"
+src="https://youtube.com/embed/ID-DO-VIDEO"
+class="active" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;hr&gt;
+&lt;h2&gt;&lt;a href="../seu.html"&gt;⬅ Voltar à Galeria&lt;/a&gt;&lt;/h2&gt;
+
+</pre></code>
+<hr>
+<h4 id="explicacao-secundarias">Explicação da Estrutura Secundária Usada</h4>
+<ol>
+<li>
+    Estrutura do iframe
+    <ul type="square">
+        <li>
+            Usamos <mark class="verde"><strong>&lt;iframe&gt;</strong></mark> para incorporar conteúdo externo dentro da página, neste caso, o player do YouTube.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>id="video1"</strong></mark> → identifica o iframe, permitindo manipulação via CSS ou JavaScript.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>src="https://www.youtube.com/embed/jQMbuK6URws"</strong></mark> → define a URL do vídeo incorporado; o código final é o ID do vídeo no YouTube.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>sandbox="allow-scripts allow-same-origin"</strong></mark> → adiciona restrições de segurança, permitindo apenas scripts internos do YouTube e acesso ao próprio domínio.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>class="active"</strong></mark> → define uma classe CSS para controlar estilo ou visibilidade do iframe.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</strong></mark> → habilita recursos extras do player, como autoplay e picture-in-picture.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>allowfullscreen</strong></mark> → permite que o vídeo seja exibido em tela cheia.
+        </li>
+    </ul>
+</li>
+<li>
+    Funcionamento do iframe
+    <ul type="square">
+        <li>
+            O iframe carrega o vídeo dentro da própria página, permitindo que o usuário assista sem sair do site.
+        </li>
+        <li>
+            O botão do YouTube no player já permite abrir o vídeo diretamente no site do YouTube.
+        </li>
+        <li>
+            A classe <mark class="verde"><strong>active</strong></mark> pode ser usada para mostrar ou esconder o vídeo dinamicamente via CSS ou JavaScript.
+        </li>
+    </ul>
+</li>
+<li>
+    Segurança e boas práticas
+    <ul type="square">
+        <li>
+            Sempre use URLs confiáveis no <mark class="verde"><strong>src</strong></mark>, como o embed oficial do YouTube.
+        </li>
+        <li>
+            O atributo <mark class="verde"><strong>sandbox</strong></mark> ajuda a proteger seu site contra scripts externos maliciosos.
+        </li>
+        <li>
+            Não é necessário usar <mark class="verde"><strong>target="_blank"</strong></mark> ou <mark class="verde"><strong>rel</strong></mark> no iframe; essas propriedades só funcionam em links.
+        </li>
+    </ul>
+</li>
+</ol>
+</section>
 
 <hr>
     <div class="proxima-aula">
         <strong>Próxima Aula <br>
-            <a href="treiner-023.html">⬅ <strong>Aula Anterior</strong></a> |
-            <a href="treiner-025.html"><strong>Próxima Aula</strong> ➡</a>
+            <a href="treiner-023.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-025.html"><strong>Próxima</strong> ➡</a>
         </strong>
     </div>
     <hr>

@@ -70,37 +70,31 @@
     <h2 id="estrutura-minima">Como adicionar favicon no HTML</h2>
     <p>Abaixo um exemplo visual do esqueleto HTML com a linha do favicon destacada:</p>
 <pre><code>
-    <mark class="amarelo">&lt;head&gt;</mark>
-        <mark class="amarelo">&lt;meta charset="UTF-8"&gt;</mark>
-        <mark class="amarelo">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+<mark class="amarelo">&lt;head&gt;</mark>
+    <mark class="amarelo">&lt;meta charset="UTF-8"&gt;</mark>
+    <mark class="amarelo">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+    <mark class="amarelo"><strong>&lt;!-- Linha importante: favicon do site --&gt;</strong></mark>
+    <mark class="verde"><strong>&lt;link rel="shortcut icon" href="SEU_FAVICON_AQUI.ico" type="image/x-icon"&gt;</strong></mark>
+    <mark class="amarelo">&lt;title&gt;Seu Título Aqui&lt;/title&gt;</mark>
+<mark class="amarelo">&lt;/head&gt;</mark>
 
-        <mark class="amarelo"><strong>&lt;!-- Linha importante: favicon do site --&gt;</strong></mark>
-        <mark class="verde"><strong>&lt;link rel="shortcut icon" href="SEU_FAVICON_AQUI.ico" type="image/x-icon"&gt;</strong></mark>
-
-        <mark class="amarelo">&lt;title&gt;Seu Título Aqui&lt;/title&gt;</mark>
-    <mark class="amarelo">&lt;/head&gt;</mark>
 </pre></code>
 
     </section>
 <hr>
     <section class="explicacao">
     <h3 id="exemplo-outros-formatos">Exemplo com outros formatos de favicon</h3>
-<pre>
-    <code>
-    <mark class="amarelo">&lt;!-- PNG para navegadores modernos --&gt;</mark>
-    <strong>
-    <mark class="verde">&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;</mark>
+<pre><code>
+        <mark class="amarelo">&lt;!-- PNG para navegadores modernos --&gt;</mark>
+    <strong><mark class="verde">&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;</mark>
     </strong>
-    <mark class="amarelo">&lt;!-- SVG para alta resolução --&gt;</mark>
-    <strong>
-    <mark class="verde">&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</mark>
+        <mark class="amarelo">&lt;!-- SVG para alta resolução --&gt;</mark>
+    <strong><mark class="verde">&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</mark>
     </strong>
-    <mark class="amarelo">&lt;!-- Fallback para Internet Explorer --&gt;</mark>
-    <strong>
-    <mark class="verde">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</mark>
+        <mark class="amarelo">&lt;!-- Fallback para Internet Explorer --&gt;</mark>
+    <strong></strong><mark class="verde">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</mark>
     </strong>
-    </code>
-</pre>
+</pre></code>
     <ul>
         <li>
             Você pode usar vários formatos ao mesmo tempo para garantir compatibilidade máxima.
@@ -166,17 +160,18 @@
     <hr>
     <section class="explicacao">
 <h2 id="exemplo-apple">Exemplo de favicon para dispositivos Apple</h2>
-<pre>
-    <code>     <mark class="amarelo">&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;</mark></code>
-</pre>
+<pre><code>
+<mark class="amarelo">&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;</mark>
+
+</code></pre>
     <p>Esse formato é usado quando o usuário adiciona o site à tela inicial do iPhone/iPad.</p>
 </section>
 <hr>
     <nav class="proxima-aula">
         <p>
         <strong>Próxima Aula: <br>
-            <a href="treiner-006.html">⬅ <strong>Aula Anterior</strong></a> |
-            <a href="treiner-008.html"><strong>Próxima Aula</strong> ➡</a>
+            <a href="treiner-006.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-008.html"><strong>Próxima</strong> ➡</a>
         </strong>
         </p>
     </nav>

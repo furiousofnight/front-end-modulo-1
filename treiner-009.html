@@ -72,20 +72,20 @@
   <h2 id="exemplos" class="centralizado">Como era vs como é hoje</h2>
 <section class="explicacao">
   <h3>Exemplo 1: Estrutura geral da página</h3>
-    <pre><code><p>Antes (pouca semântica):</p>
-    <mark class="amarelo">&lt;div id="topo"&gt;</mark>
-      <mark class="amarelo">&lt;div class="logo"&gt;Minha Marca&lt;/div&gt;</mark>
-      <mark class="amarelo">&lt;div class="menu"&gt;... links ...&lt;/div&gt;</mark>
-    <mark class="amarelo">&lt;/div&gt;</mark>
-    <mark class="amarelo">&lt;div id="conteudo"&gt;... artigos ...&lt;/div&gt;</mark>
-    <mark class="amarelo">&lt;div id="rodape"&gt;© 2025&lt;/div&gt;</mark>
-    </code></pre>
-    <hr>
-    <pre><code><p>Hoje (nomes que revelam o papel):</p>
+  <pre><code><p>Antes (pouca semântica):</p>
+  <mark class="amarelo">&lt;div id="topo"&gt;</mark>
+    <mark class="amarelo">&lt;div class="logo"&gt;Minha Marca&lt;/div&gt;</mark>
+    <mark class="amarelo">&lt;div class="menu"&gt;... links ...&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;div id="conteudo"&gt;... artigos ...&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;div id="rodape"&gt;© 2025&lt;/div&gt;</mark>
+</code></pre>
+  <hr>
+  <pre><code><p>Hoje (nomes que revelam o papel):</p><strong>
     <mark class="verde">&lt;header&gt;Minha Marca e navegação&lt;/header&gt;</mark>
     <mark class="verde">&lt;main&gt;Conteúdo principal&lt;/main&gt;</mark>
-    <mark class="verde">&lt;footer&gt;© 2025 roda-pé&lt;/footer&gt;</mark>
-    </code></pre>
+    <mark class="verde">&lt;footer&gt;© 2025 roda-pé&lt;/footer&gt;</mark></strong>
+</pre></code>
 </section>
 
 <hr>
@@ -93,34 +93,35 @@
 <section class="explicacao">
   <h3>Exemplo 2: Navegação</h3>
   <hr>
-  <section class="exemplo-visual">
-    <pre><code><p>Antes:</p>
-    <mark class="amarelo">&lt;div class="menu"&gt;Início, Artigos, Contato&lt;/div&gt;</mark>
-    </code></pre>
-    <pre><code><p>Hoje:</p>
-    <mark class="verde">&lt;nav&gt;Início, Artigos, Contato&lt;/nav&gt;</mark>
-    </code></pre>
-  </section>
+  <div class="exemplo-visual">
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="menu"&gt;Início, Artigos, Contato&lt;/div&gt;</mark>
+
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;nav&gt;Início, Artigos, Contato&lt;/nav&gt;</mark>
+</code></pre>
+  </div>
 </section>
 <hr>
 
 <section class="explicacao">
   <h3>Exemplo 3: Um artigo</h3>
   <hr>
-    <pre><code><p>Antes:</p>
-    <mark class="amarelo">&lt;div class="post"&gt;</mark>
-    <mark class="amarelo">&lt;h1&gt;Título&lt;/h1&gt;</mark>
-    <mark class="amarelo">Publicado em 22/08/2025</mark>
-    <mark class="amarelo">Texto do artigo...</mark>
-    <mark class="amarelo">&lt;/div&gt;</mark>
-    </code></pre>
-    <pre><code><p>Hoje:</p>
-    <mark class="verde">&lt;article&gt;</mark>
-    <mark class="verde">&lt;h1&gt;Título&lt;/h1&gt;</mark>
-    <mark class="verde">&lt;time datetime="2025-08-22"&gt;22/08/2025&lt;/time&gt;</mark>
-    <mark class="verde">Texto do artigo...</mark>
-    <mark class="verde">&lt;/article&gt;</mark>
-    </code></pre>
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="post"&gt;</mark>
+<mark class="amarelo">&lt;h1&gt;Título&lt;/h1&gt;</mark>
+<mark class="amarelo">Publicado em 22/08/2025</mark>
+<mark class="amarelo">Texto do artigo...</mark>
+<mark class="amarelo">&lt;/div&gt;</mark>
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;article&gt;</mark>
+<mark class="verde">&lt;h1&gt;Título&lt;/h1&gt;</mark>
+<mark class="verde">&lt;time datetime="2025-08-22"&gt;22/08/2025&lt;/time&gt;</mark>
+<mark class="verde">Texto do artigo...</mark>
+<mark class="verde">&lt;/article&gt;</mark>
+</code></pre>
 </section>
 <hr>
 
@@ -128,32 +129,33 @@
   <h3>Exemplo 4: Conteúdo principal e lateral</h3>
   <hr>
   <section class="exemplo-visual">
-    <pre><code><p>Antes:</p>
-    <mark class="amarelo">&lt;div class="col-esq"&gt;links relacionados&lt;/div&gt;</mark>
-    <mark class="amarelo">&lt;div class="col-dir"&gt;texto principal&lt;/div&gt;</mark>
-    </code></pre>
-    <pre><code><p>Hoje:</p>
-    <mark class="verde">&lt;main&gt;texto principal&lt;/main&gt;</mark>
-    <mark class="verde">&lt;aside&gt;links relacionados&lt;/aside&gt;</mark>
-    </code></pre>
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="col-esq"&gt;links relacionados&lt;/div&gt;</mark>
+<mark class="amarelo">&lt;div class="col-dir"&gt;texto principal&lt;/div&gt;</mark>
+
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;main&gt;texto principal&lt;/main&gt;</mark>
+<mark class="verde">&lt;aside&gt;links relacionados&lt;/aside&gt;</mark>
+
+</code></pre>
   </section>
 </section>
 <hr>
 
 <section class="explicacao">
   <h3>Exemplo 5: Mídia com descrição</h3>
-  <hr>
-    <pre><code><p>Antes:</p>
+  <hr><p>Antes:</p>
     <mark class="amarelo">&lt;img src="grafico.png"&gt;</mark>
     <p>Gráfico de vendas</p>
-    </code></pre>
 
-    <pre><code><p>Hoje:</p>
-    <mark class="verde">&lt;figure&gt;</mark>
-      <mark class="verde">&lt;img src="grafico.png" alt="Gráfico de vendas de jan a jun 2025"&gt;</mark>
-      <mark class="verde">&lt;figcaption&gt;Gráfico de vendas (jan a jun 2025).&lt;/figcaption&gt;</mark>
-    <mark class="verde">&lt;/figure&gt;</mark>
-    </code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;figure&gt;</mark>
+  <mark class="verde">&lt;img src="grafico.png" alt="Gráfico de vendas de jan a jun 2025"&gt;</mark>
+  <mark class="verde">&lt;figcaption&gt;Gráfico de vendas (jan a jun 2025).&lt;/figcaption&gt;</mark>
+<mark class="verde">&lt;/figure&gt;</mark>
+
+</code></pre>
 </section>
 <hr>
 
@@ -255,8 +257,8 @@
    <section class="proxima-aula">
      <p>
           <strong>Próxima Aula: <br>
-              <a href="treiner-008.html">⬅ <strong>Aula Anterior</strong></a> |
-              <a href="treiner-010.html"><strong>Próxima Aula</strong> ➡</a>
+              <a href="treiner-008.html">⬅ <strong>Anterior</strong></a> |
+              <a href="treiner-010.html"><strong>Próxima</strong> ➡</a>
           </strong>
       </p>
    </section>
