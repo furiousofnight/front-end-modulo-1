@@ -367,9 +367,10 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
     box-shadow: var(--cor-shadow-hover);
 }
 
+/* Grade de vídeos */
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* sempre 2 colunas */
     gap: 10px;
     width: 90%;
     max-width: 600px;
@@ -379,23 +380,15 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
     border-radius: 12px;
 }
 
-.video-grid::before {
-    content: '';
-    padding-top: 100%;
-    grid-column: 1 / -1;
-}
-
-.video-grid > * {
-    grid-row: 1 / span 2;
-}
-
+/* Cada vídeo como link quadrado */
 .video-grid a {
     display: block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 100%; /* mantém proporção quadrada */
 }
 
+/* Miniaturas de vídeos */
 .video-grid img {
     position: absolute;
     top: 0;
@@ -413,13 +406,23 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
     box-shadow: 0 6px 20px rgba(0,255,255,0.4);
 }
 
+/* Responsividade */
 @media (max-width: 480px) {
     .video-grid {
-        width: 280px;
+        grid-template-columns: repeat(2, 1fr); /* mantém 2 colunas no celular */
         gap: 8px;
         padding: 10px;
+        width: 100%;
     }
-}/* Galeria de Imagens */
+
+    /* Galerias e Mídia */
+    .galeria-imagens img,
+    .galeria-videos video {
+        max-width: 90%;
+    }
+}
+
+/* Galeria de Imagens */
 .galeria-imagens {
     display: flex;
     flex-wrap: wrap;
@@ -442,6 +445,7 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
     transform: scale(1.08);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
+
 
 /* Elemento Video */
 video {
@@ -776,11 +780,7 @@ audio::-webkit-media-controls-volume-slider {
         max-width: 90%;
     }
 
-    .galeria-imagens img,
-    .galeria-videos video {
-        max-width: 45%;
-    }
-}
+    
 
 @media (max-width: 768px) {
     /* Ajustes de Layout Base */
@@ -894,18 +894,6 @@ audio::-webkit-media-controls-volume-slider {
     .link-bloco {
         padding: 10px 12px;
         font-size: 0.85em;
-    }
-
-    /* Galerias e Mídia */
-    .galeria-imagens img,
-    .galeria-videos video {
-        max-width: 90%;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 10px;
     }
 }
 
@@ -1021,4 +1009,5 @@ audio::-webkit-media-controls-volume-slider {
     margin-bottom: 15px;
     line-height: 1.5;
     color: var(--cor-texto);
+}   
 }
