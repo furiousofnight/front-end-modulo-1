@@ -59,7 +59,6 @@ li { margin-bottom:0.5em; }
 
 /* Navbar e índices */
 .navbar ul { list-style:none; display:flex; justify-content:center; gap:24px; }
-.indice-simples ul { list-style:disc inside; padding-left:0.5em; }
 .redes-sociais { list-style:none; padding:0; margin:20px 0; display:flex; flex-direction:column; gap:12px; }
 
 nav.navbar {
@@ -84,6 +83,56 @@ nav.navbar a {
     border:1px solid var(--cor-navbar-border-hover);
 }
 nav.navbar a:hover { background:var(--cor-navbar-border-hover); color:#fff; border-color:var(--cor-navbar-border); }
+
+/* Índice Simples */
+.indice-simples {
+    width: 100%;
+    max-width: 340px;
+    margin: 31px 0;
+    padding: 0px 18px;
+    color: #e79039;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.indice-simples ul {
+    list-style: disc inside;
+    padding-left: 0.5em;
+    margin: 0;
+}
+
+.indice-simples li { margin: 0; }
+
+.indice-simples a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.indice-simples a:hover { text-decoration: underline; }
+
+.indice-simples h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.6em;
+    padding-left: 15px;
+    color: yellow;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Responsividade do Índice Simples */
+@media (max-width: 768px) {
+    .indice-simples { max-width: 100%; padding: 0 12px; margin: 15px 0; }
+    .indice-simples h2 { font-size: 1.1em; }
+    .indice-simples a { font-size: 0.95em; }
+}
+
+@media (max-width: 480px) {
+    .indice-simples { padding: 0 8px; margin: 10px 0; }
+    .indice-simples h2 { font-size: 1em; }
+    .indice-simples a { font-size: 0.85em; }
+}
 
 /* Blocos de conteúdo */
 .explicacao {
