@@ -496,6 +496,22 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
 .shadow-light { box-shadow: var(--cor-shadow-light); }
 .shadow-hover { box-shadow: var(--cor-shadow-hover); }
 
+/* Override para exemplos de código inline */
+.explicacao [style*="font-size"] {
+    font-size: inherit !important;
+}
+
+.explicacao [style*="color"] {
+    color: inherit !important;
+}
+
+/* Exceção apenas para os exemplos específicos de demonstração */
+.explicacao .demo-inline [style*="font-size"],
+.explicacao .demo-inline [style*="color"] {
+    font-size: unset !important;
+    color: unset !important;
+}
+
 /* Estilos para blocos de exemplo de código */
 .exemplo-codigo {
     position: relative;
