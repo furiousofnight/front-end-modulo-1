@@ -7,176 +7,165 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">🏠 Início</a></li>
-      <li><a href="indice-geral.html">📑 Índices</a></li>
-      <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','026')">⚖ Política</a></li>
-      <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','026')">👤 Sobre</a></li>
-    </ul>
-  </nav>
-
-  <h1 class="centralizado">📘 Aula 26: Aplicando CSS Interno/Local 📘</h1>
-  <hr>
-
-  <!-- Índice -->
-  <nav class="indice-simples">
-    <h2>Índice</h2>
-    <ul>
-      <li><a href="#oque-e-css-interno"><strong>O que é CSS Interno?</strong></a></li>
-      <li><a href="#exemplo-pratico"><strong>Exemplo Prático</strong></a></li>
-      <li><a href="#estrutura-e-visualizacao"><strong>Estrutura & Visualização de Estrutura</strong></a></li>
-      <li><a href="#aplicando-cores-e-destaques"><strong>Aplicando Cores & Destaques</strong></a></li>
-      <li><a href="#comparando"><strong>Comparando CSS: Interno, Externo & Inline</strong></a></li>
-      <li><a href="#pros-e-contras"><strong>Prós e Contras do CSS Interno/Local</strong></a></li>
-    </ul>
-  </nav>
-  <hr>
-
-  <!-- O que é CSS Interno -->
-  <section class="explicacao" id="oque-e-css-interno">
-    <h2>O que é CSS Interno/Local?</h2>
-    <p>
-      CSS <mark class="amarelo"><strong>interno</strong></mark> ou <mark class="amarelo"><strong>local</strong></mark> é quando os estilos são aplicados diretamente dentro de uma página HTML, usando a tag <mark class="verde"><strong>&lt;style&gt;</strong></mark> no <mark class="verde"><strong>&lt;head&gt;</strong></mark>.
-      Isso permite que cada página tenha um estilo específico e independente de outros arquivos, tornando a alteração mais rápida e prática em projetos pequenos ou testes.
-    </p>
-  </section>
-  <hr>
-
-  <!-- Exemplo Prático -->
-  <section class="explicacao" id="exemplo-pratico">
-    <h3>Exemplo Prático:</h3>
-    <pre><code>
-&lt;head&gt;
-  &lt;style&gt;
-    body {
-      background-color: antiquewhite;
-      font-family: Arial, sans-serif;
-      text-align: justify;
-      color: #333;
-    }
-    h1 { color: blue; text-align: center; }
-    h2 { color: green; }
-    p { margin-bottom: 16px; }
-  &lt;/style&gt;
-&lt;/head&gt;
+  <main>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="indice-geral.html">📑 Índices</a></li>
+        <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','026')">⚖ Política</a></li>
+        <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','026')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+    <h1 class="centralizado">📘 Aula 26: Aplicando CSS Interno/Local 📘</h1>
+    <hr>
+    <!-- Índice -->
+    <nav class="indice-simples">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#oque-e-css-interno"><strong>O que é CSS Interno?</strong></a></li>
+        <li><a href="#exemplo-pratico"><strong>Exemplo Prático</strong></a></li>
+        <li><a href="#estrutura-e-visualizacao"><strong>Estrutura & Visualização de Estrutura</strong></a></li>
+        <li><a href="#aplicando-cores-e-destaques"><strong>Aplicando Cores & Destaques</strong></a></li>
+        <li><a href="#comparando"><strong>Comparando CSS: Interno, Externo & Inline</strong></a></li>
+        <li><a href="#pros-e-contras"><strong>Prós e Contras do CSS Interno/Local</strong></a></li>
+      </ul>
+    </nav>
+    <hr>
+    <!-- O que é CSS Interno -->
+    <section class="explicacao" id="oque-e-css-interno">
+      <h2>O que é CSS Interno/Local?</h2>
+      <p>
+        CSS <mark class="amarelo"><strong>interno</strong></mark> ou <mark class="amarelo"><strong>local</strong></mark> é quando os estilos são aplicados diretamente dentro de uma página HTML, usando a tag <mark class="verde"><strong>&lt;style&gt;</strong></mark> no <mark class="verde"><strong>&lt;head&gt;</strong></mark>.
+        Isso permite que cada página tenha um estilo específico e independente de outros arquivos, tornando a alteração mais rápida e prática em projetos pequenos ou testes.
+      </p>
+    </section>
+    <hr>
+    <!-- Exemplo Prático -->
+    <section class="explicacao" id="exemplo-pratico">
+      <h3>Exemplo Prático:</h3>
+      <pre><code>
+    &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background-color: antiquewhite;
+        font-family: Arial, sans-serif;
+        text-align: justify;
+        color: #333;
+      }
+      h1 { color: blue; text-align: center; }
+      h2 { color: green; }
+      p { margin-bottom: 16px; }
+    &lt;/style&gt;
+    &lt;/head&gt;
+      </code></pre>
+      <p>Esse exemplo mostra como aplicar diferentes estilos diretamente no HTML, sem depender de CSS externo.</p>
+      <h3>Dicas Profissionais:</h3>
+      <ul>
+        <li>Use CSS interno em projetos pequenos ou páginas únicas.</li>
+        <li>Evite em projetos grandes, pois dificulta manutenção e reutilização.</li>
+        <li>Combine com comentários explicativos para facilitar a leitura do código.</li>
+      </ul>
+    </section>
+    <hr>
+    <!-- Estrutura e Visualização -->
+    <section class="explicacao" id="estrutura-e-visualizacao">
+      <h2>Estrutura e Visualização de Estrutura</h2>
+      <p>
+        É possível definir estilos individuais para cada tipo de título <mark class="amarelo"><strong>(&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;)</strong></mark> e parágrafo <mark class="amarelo"><strong>(&lt;p&gt;)</strong></mark>. Além de cores, é possível controlar alinhamento, margens, padding e bordas.
+      </p>
+      <h3>Exemplo Visual:</h3>
+      <div class="exemplo-visual verde">
+        Este parágrafo está estilizado com CSS interno! (verde)
+      </div>
+      <pre><code><mark class="amarelo">div { background-color:#4cffb3; color:#000; text-align:center; padding:12px; border-radius:6px; }</mark>
+      </code></pre>
+    </section>
+    <hr>
+    <!-- Aplicando cores e destaques -->
+    <section class="explicacao" id="aplicando-cores-e-destaques">
+      <h2>Aplicando Cores e Destaques</h2>
+      <p>
+        Utilize <mark class="verde"><strong>verde</strong></mark> para conceitos importantes e <mark class="amarelo"><strong>amarelo</strong></mark> para observações, tornando o conteúdo didático.
+      </p>
+      <h3>Exemplo Prático:</h3>
+      <div class="exemplo-visual amarelo">
+        CSS <mark class="verde">interno</mark> é rápido para pequenas páginas.
+      </div>
+      <div class="exemplo-visual verde">
+        Use <mark class="amarelo">marcação</mark> para destacar informações importantes.
+      </div>
+      <pre><code>
+    <mark class="amarelo">&lt;p&gt;CSS &lt;mark class="verde"&gt;interno&lt;/mark&gt; é rápido para pequenas páginas.&lt;/p&gt;</mark>
+    
+    <mark class="amarelo">&lt;p&gt;Use &lt;mark class="amarelo"&gt;marcação&lt;/mark&gt; para destacar informações importantes.&lt;/p&gt;</mark>
+    
     </code></pre>
-    <p>Esse exemplo mostra como aplicar diferentes estilos diretamente no HTML, sem depender de CSS externo.</p>
-
-    <h3>Dicas Profissionais:</h3>
-    <ul>
-      <li>Use CSS interno em projetos pequenos ou páginas únicas.</li>
-      <li>Evite em projetos grandes, pois dificulta manutenção e reutilização.</li>
-      <li>Combine com comentários explicativos para facilitar a leitura do código.</li>
-    </ul>
-  </section>
-  <hr>
-
-  <!-- Estrutura e Visualização -->
-  <section class="explicacao" id="estrutura-e-visualizacao">
-    <h2>Estrutura e Visualização de Estrutura</h2>
-    <p>
-      É possível definir estilos individuais para cada tipo de título <mark class="amarelo"><strong>(&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;)</strong></mark> e parágrafo <mark class="amarelo"><strong>(&lt;p&gt;)</strong></mark>. Além de cores, é possível controlar alinhamento, margens, padding e bordas.
-    </p>
-
-    <h3>Exemplo Visual:</h3>
-    <div class="exemplo-visual verde">
-      Este parágrafo está estilizado com CSS interno! (verde)
+    </section>
+    <hr>
+    <!-- Comparando CSS -->
+    <section class="explicacao" id="comparando">
+      <h2>Comparando CSS: Interno x Externo x Inline</h2>
+      <table class="explicacao">
+        <tr>
+          <th>Tipo</th>
+          <th>Vantagens</th>
+          <th>Desvantagens</th>
+        </tr>
+        <tr>
+          <td>Interno/Local</td>
+          <td>Rápido para páginas únicas, fácil de testar</td>
+          <td>Dificulta manutenção em projetos grandes, não reutilizável</td>
+        </tr>
+        <tr>
+          <td>Externo</td>
+          <td>Reutilizável em várias páginas, fácil de manter</td>
+          <td>Depende de arquivo separado, alterações rápidas exigem recarregar o CSS</td>
+        </tr>
+        <tr>
+          <td>Inline</td>
+          <td>Alteração imediata no elemento, útil para testes rápidos</td>
+          <td>Dificulta manutenção, repete código e polui o HTML</td>
+        </tr>
+      </table>
+    </section>
+    <hr>
+    <!-- Boas Práticas -->
+    <section class="explicacao">
+      <h3>Boas Práticas:</h3>
+      <ul>
+        <li>Prefira CSS externo em projetos grandes para manter o código limpo.</li>
+        <li>Use CSS interno para protótipos ou páginas isoladas.</li>
+        <li>Inline deve ser usado apenas para testes ou ajustes específicos.</li>
+        <li>Comente seu código para facilitar entendimento de futuros desenvolvedores.</li>
+      </ul>
+    </section>
+    <hr>
+    <!-- Prós e Contras -->
+    <section class="explicacao" id="pros-e-contras">
+      <h2>Prós e Contras do CSS Interno/Local</h2>
+      <h3>Prós:</h3>
+      <ul>
+        <li>Permite alterações rápidas em páginas únicas.</li>
+        <li>Ótimo para prototipagem ou testes de layout.</li>
+        <li>Aprendizado didático do CSS sem depender de arquivos externos.</li>
+      </ul>
+      <h3>Contras:</h3>
+      <ul>
+        <li>Não é reutilizável em múltiplas páginas.</li>
+        <li>Dificulta manutenção em projetos maiores.</li>
+        <li>Pode gerar repetição de código e aumentar o tamanho da página.</li>
+      </ul>
+    </section>
+    <hr>
+    <!-- Próxima aula -->
+    <div class="proxima-aula">
+      <strong>Próxima Aula <br>
+        <a href="treiner-025.html">⬅ <strong>Anterior</strong></a> |
+        <a href="treiner-027.html"><strong>Próxima</strong> ➡</a>
+      </strong>
     </div>
-    <pre><code><mark class="amarelo">div { background-color:#4cffb3; color:#000; text-align:center; padding:12px; border-radius:6px; }</mark>
-    </code></pre>
-  </section>
-  <hr>
-
-  <!-- Aplicando cores e destaques -->
-  <section class="explicacao" id="aplicando-cores-e-destaques">
-    <h2>Aplicando Cores e Destaques</h2>
-    <p>
-      Utilize <mark class="verde"><strong>verde</strong></mark> para conceitos importantes e <mark class="amarelo"><strong>amarelo</strong></mark> para observações, tornando o conteúdo didático.
-    </p>
-
-    <h3>Exemplo Prático:</h3>
-    <div class="exemplo-visual amarelo">
-      CSS <mark class="verde">interno</mark> é rápido para pequenas páginas.
-    </div>
-    <div class="exemplo-visual verde">
-      Use <mark class="amarelo">marcação</mark> para destacar informações importantes.
-    </div>
-    <pre><code>
-<mark class="amarelo">&lt;p&gt;CSS &lt;mark class="verde"&gt;interno&lt;/mark&gt; é rápido para pequenas páginas.&lt;/p&gt;</mark>
-
-<mark class="amarelo">&lt;p&gt;Use &lt;mark class="amarelo"&gt;marcação&lt;/mark&gt; para destacar informações importantes.&lt;/p&gt;</mark>
-
-</code></pre>
-  </section>
-  <hr>
-
-  <!-- Comparando CSS -->
-  <section class="explicacao" id="comparando">
-    <h2>Comparando CSS: Interno x Externo x Inline</h2>
-    <table class="explicacao">
-      <tr>
-        <th>Tipo</th>
-        <th>Vantagens</th>
-        <th>Desvantagens</th>
-      </tr>
-      <tr>
-        <td>Interno/Local</td>
-        <td>Rápido para páginas únicas, fácil de testar</td>
-        <td>Dificulta manutenção em projetos grandes, não reutilizável</td>
-      </tr>
-      <tr>
-        <td>Externo</td>
-        <td>Reutilizável em várias páginas, fácil de manter</td>
-        <td>Depende de arquivo separado, alterações rápidas exigem recarregar o CSS</td>
-      </tr>
-      <tr>
-        <td>Inline</td>
-        <td>Alteração imediata no elemento, útil para testes rápidos</td>
-        <td>Dificulta manutenção, repete código e polui o HTML</td>
-      </tr>
-    </table>
-  </section>
-  <hr>
-
-  <!-- Boas Práticas -->
-  <section class="explicacao">
-    <h3>Boas Práticas:</h3>
-    <ul>
-      <li>Prefira CSS externo em projetos grandes para manter o código limpo.</li>
-      <li>Use CSS interno para protótipos ou páginas isoladas.</li>
-      <li>Inline deve ser usado apenas para testes ou ajustes específicos.</li>
-      <li>Comente seu código para facilitar entendimento de futuros desenvolvedores.</li>
-    </ul>
-  </section>
-  <hr>
-
-  <!-- Prós e Contras -->
-  <section class="explicacao" id="pros-e-contras">
-    <h2>Prós e Contras do CSS Interno/Local</h2>
-    <h3>Prós:</h3>
-    <ul>
-      <li>Permite alterações rápidas em páginas únicas.</li>
-      <li>Ótimo para prototipagem ou testes de layout.</li>
-      <li>Aprendizado didático do CSS sem depender de arquivos externos.</li>
-    </ul>
-    <h3>Contras:</h3>
-    <ul>
-      <li>Não é reutilizável em múltiplas páginas.</li>
-      <li>Dificulta manutenção em projetos maiores.</li>
-      <li>Pode gerar repetição de código e aumentar o tamanho da página.</li>
-    </ul>
-  </section>
-  <hr>
-
-  <!-- Próxima aula -->
-  <div class="proxima-aula">
-    <strong>Próxima Aula <br>
-      <a href="treiner-025.html">⬅ <strong>Anterior</strong></a> |
-      <a href="treiner-027.html"><strong>Próxima</strong> ➡</a>
-    </strong>
-  </div>
+  </main>
   <hr>
 
   <!-- Créditos -->
