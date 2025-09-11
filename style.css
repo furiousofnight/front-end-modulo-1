@@ -227,9 +227,45 @@ nav.navbar a:hover {
 /* 5. Códigos e Marcações */
 
 /* Ajuste para manter padrão visual das outras páginas */
-.exemplo-container, .exemplo-codigo, .exemplo-render, .exemplo-visual, .verde, .amarelo {
-    all: unset;
+
+.exemplo-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
 }
+.exemplo-codigo, .exemplo-render {
+    flex: 1;
+    min-width: 45%;
+}
+.exemplo-render {
+    background: var(--cor-fundo);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-destaque);
+}
+@media (max-width: 768px) {
+    .exemplo-container { flex-direction: column; }
+    .exemplo-codigo, .exemplo-render { min-width: 100%; }
+}
+.exemplo-visual {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.exemplo-visual h2 { border: none; padding-bottom: 0; margin-top: 0; }
+.exemplo-visual.verde, .verde {
+    background-color: #4cffb3;
+    color: #000;
+}
+.exemplo-visual.amarelo, .amarelo {
+    background-color: #fff700;
+    color: #000;
+}
+.exemplo-visual:hover { transform: scale(1.05); box-shadow: var(--cor-shadow-hover); }
 
 /* Mantém apenas cor de fundo para destaque, sem alterar tamanho ou layout */
 .exemplo-visual.verde, .verde {
