@@ -552,7 +552,6 @@ audio::-webkit-media-controls-volume-slider {
     font-weight: bold;
     text-align: left;
 }
-
 /* Bloco de links — versão moderna e interativa */
 .link-bloco {
     background: linear-gradient(135deg, rgba(0,225,255,0.06), rgba(155, 0, 255,0.02));
@@ -566,12 +565,13 @@ audio::-webkit-media-controls-volume-slider {
     line-height: 1.6;
     word-wrap: break-word;
     border: 1px solid rgba(0,225,255,0.12);
-    transition: transform .24s ease, box-shadow .24s ease, background .24s ease;
+    transition: transform .24s ease, box-shadow .24s ease, background-color .24s ease;
     overflow: hidden;
 }
 
-/* efeito sutil ao passar o mouse no bloco */
-.link-bloco:hover {
+/* efeito sutil ao passar o mouse no bloco (desktop) */
+.link-bloco:hover,
+.link-bloco:active {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(0,225,255,0.10);
 }
@@ -609,18 +609,20 @@ audio::-webkit-media-controls-volume-slider {
     z-index: -1;
 }
 
-/* hover no link — mais chamativo */
+/* hover/focus/active no link — mais chamativo */
 .link-bloco a:hover,
-.link-bloco a:focus {
+.link-bloco a:focus,
+.link-bloco a:active {
     color: #fff;
     transform: translateY(-3px);
     text-shadow: 0 0 6px rgba(0,225,255,0.8); /* glow no hover */
     outline: none;
 }
 
-/* ativar animação do pseudo-elemento no hover */
+/* ativar animação do pseudo-elemento no hover/focus/active */
 .link-bloco a:hover::before,
-.link-bloco a:focus::before {
+.link-bloco a:focus::before,
+.link-bloco a:active::before {
     transform: translateY(-50%) translateX(0);
     opacity: 1;
 }
@@ -635,8 +637,6 @@ audio::-webkit-media-controls-volume-slider {
     .link-bloco { padding: 14px 16px; border-radius:10px; }
     .link-bloco a { padding: 7px 10px; font-size:0.95rem; }
 }
-
-
 
 .proxima-aula {
     background: #1e2d3b;
