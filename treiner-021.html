@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatos de videos para sites</title>
     <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <script src="modulo-2/modal.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -108,7 +109,7 @@ Quando um vídeo é hospedado, ele fica armazenado em um servidor, podendo ser a
     vídeo convertido em <mark class="verde"><strong>OGV</strong></mark>, pesando <mark class="amarelo"><strong>5.711KB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
 </li>
 </ol>
-<p>“Clique na imagem para ampliar</p>
+<p>“Clique na imagem para ampliar"</p>
 <figure>
 <img src="imagens/imagem-tamanhos-videos.png" 
     alt="Resultados de tamanhos usando a ferramenta" 
@@ -124,33 +125,6 @@ Quando um vídeo é hospedado, ele fica armazenado em um servidor, podendo ser a
 <span class="close" onclick="closeModal()">&times;</span>
 <img class="modal-content" id="modalImg">
 </div>
-
-<script>
-function openModal(img) {
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = img.src;
-
-    // Fecha o modal quando clicar fora da imagem
-    modal.onclick = function(e) {
-        if (e.target === modal || e.target.className === 'close') {
-            closeModal();
-        }
-    }
-
-    // Fecha o modal com a tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    });
-}
-
-function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
-}
-</script>
 <p>
 <strong>NOTA:</strong> Vídeos pesados podem prejudicar tempo de carregamento, especialmente em mobile. <br>
 Fazer conversão para ter uma página de internet fluida e com menor custo na hospedagem do seu site e boas práticas.

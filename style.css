@@ -332,18 +332,18 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
 .complemento figure,
 .card figure {
     text-align: center;
-    margin: 24px auto;
+    margin: 20px auto;
 }
 
 .explicacao figure img,
 .complemento figure img,
 .card figure img {
     display: block;
-    width: 50%;
-    max-width: 300px;
+    width: 30%;
+    max-width: 200px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgb(0, 238, 255);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto;
 }
