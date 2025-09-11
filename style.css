@@ -553,31 +553,90 @@ audio::-webkit-media-controls-volume-slider {
     text-align: left;
 }
 
+/* Bloco de links — versão moderna e interativa */
 .link-bloco {
-    background-color: var(--cor-fundo);
+    background: linear-gradient(135deg, rgba(0,225,255,0.06), rgba(155, 0, 255,0.02));
     color: var(--cor-texto-alt);
-    padding: 16px 20px;
-    border-radius: 8px;
-    box-shadow: var(--cor-shadow-light);
-    margin: 20px 0;
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+    margin: 22px 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95em;
-    line-height: 1.5em;
+    font-size: 1rem;
+    line-height: 1.6;
     word-wrap: break-word;
+    border: 1px solid rgba(0,225,255,0.12);
+    transition: transform .24s ease, box-shadow .24s ease, background .24s ease;
+    overflow: hidden;
 }
 
-.link-bloco a {
+/* efeito sutil ao passar o mouse no bloco */
+.link-bloco:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,225,255,0.10);
+}
+
+/* estilo dos links internos — agora bem visíveis */
+.link-bloco a,
+.link-bloco a:link,
+.link-bloco a:visited {
+    display: inline-block;
     color: var(--cor-principal);
-    text-decoration: underline;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    text-decoration: underline; /* evidencia que é link */
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    transition: color .22s ease, transform .22s ease, text-shadow .22s ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer; /* reforça que é clicável */
 }
 
-.link-bloco a:hover {
-    color: #ffdd00;
-    text-shadow: 0 1px 2px #0006;
-    transform: translateY(-1px);
+/* fundo animado por baixo do link (pseudo-elemento) */
+.link-bloco a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,225,255,0.25), rgba(255,127,80,0.15));
+    border-radius: 8px;
+    transition: transform .36s cubic-bezier(.2,.9,.2,1), opacity .36s;
+    opacity: 0;
+    z-index: -1;
 }
+
+/* hover no link — mais chamativo */
+.link-bloco a:hover,
+.link-bloco a:focus {
+    color: #fff;
+    transform: translateY(-3px);
+    text-shadow: 0 0 6px rgba(0,225,255,0.8); /* glow no hover */
+    outline: none;
+}
+
+/* ativar animação do pseudo-elemento no hover */
+.link-bloco a:hover::before,
+.link-bloco a:focus::before {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
+
+/* foco acessível */
+.link-bloco a:focus {
+    box-shadow: 0 0 0 4px rgba(0,225,255,0.12);
+}
+
+/* responsivo para telas muito pequenas */
+@media (max-width:480px) {
+    .link-bloco { padding: 14px 16px; border-radius:10px; }
+    .link-bloco a { padding: 7px 10px; font-size:0.95rem; }
+}
+
+
 
 .proxima-aula {
     background: #1e2d3b;
@@ -833,11 +892,6 @@ audio::-webkit-media-controls-volume-slider {
         font-size: 1em;
     }
 
-    /* Blocos de Conteúdo */
-    .link-bloco {
-        padding: 12px 14px;
-        font-size: 0.9em;
-    }
 
     pre {
         margin: 10px -15px;
@@ -891,10 +945,6 @@ audio::-webkit-media-controls-volume-slider {
         font-size: 11px;
     }
 
-    .link-bloco {
-        padding: 10px 12px;
-        font-size: 0.85em;
-    }
 }
 
 @media (max-width: 320px) {
@@ -1010,4 +1060,4 @@ audio::-webkit-media-controls-volume-slider {
     line-height: 1.5;
     color: var(--cor-texto);
 }   
-}
+} 
