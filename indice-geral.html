@@ -96,13 +96,37 @@
             ol.indice li h2 { font-size: 0.95em; }
             ol.indice li p { font-size: 0.85em; }
         }
-        
+        .modulos-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0 40px 0;
+}
+
+.btn-modulo {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #00ff99, #00ccff);
+    color: #0f1a25;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #0005;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+}
+
+.btn-modulo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px #0007;
+    background: linear-gradient(135deg, #00ccff, #00ff99);
+}
     </style>
 </head>
 <body>
 
-    <h1>Índice Geral das 27 Aulas</h1>
-    <h2>Módulo 1: Introdução ao HTML5 & CSS3</h2>
+    <h1>Módulo 1: Introdução ao HTML5 & CSS3</h1>
 
     <ol class="indice">
         <!-- Aula 1 -->
@@ -246,5 +270,11 @@
     </ol>
     <hr>
     <h2>Fim Do Modulo 1</h2>
+    <div class="modulos-botoes">
+    <a href="modulo-2/apresentacao-m2.html" class="btn-modulo">Módulo 2</a>
+    <a href="modulo-3/apresentacao-m3.html" class="btn-modulo">Módulo 3</a>
+    <a href="modulo-4/apresentacao-m4.html" class="btn-modulo">Módulo 4</a>
+    <a href="modulo-5/apresentacao-m5.html" class="btn-modulo">Módulo 5</a>
+</div>
 </body>
 </html>

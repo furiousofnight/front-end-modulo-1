@@ -316,8 +316,8 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
 
 /* Rodapé */
 .roda-pe p { font-size: 0.9em; color: #c8c8c8; text-align: center; margin: 6px 0; line-height: 1.4; font-style: italic; transition: color 0.3s ease; }
-.roda-pe p a { color: #ffdd00; text-decoration: none; font-weight: bold; }
-.roda-pe p a:hover { color: #fff; text-decoration: underline; }
+.roda-pe p a { color: #e5ff00; text-decoration: none; font-weight: bold; }
+.roda-pe p a:hover { color: #08ceff; text-decoration: underline; }
 
 .creditos { background: #232b36; border: 2px solid #143df0; border-radius: 10px; padding: 18px 20px; margin: 32px auto; max-width: 700px; color: #fff; box-shadow: 0 2px 10px #0005; text-align: center; }
 .creditos a { color: var(--cor-principal); text-decoration: underline; }
@@ -494,4 +494,4 @@ audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-volume-
 .hover-scale { transition: transform 0.3s ease; }
 .hover-scale:hover { transform: scale(1.05); }
 .shadow-light { box-shadow: var(--cor-shadow-light); }
-.shadow-hover { box-shadow: var(--cor-shadow-hover); }
+.shadow-hover { box-shadow: var(--cor-shadow-hover); } 

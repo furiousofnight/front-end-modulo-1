@@ -139,17 +139,36 @@
         Voltar para Aula
     </a>
 </div>
-    <script>
-        // Recupera a aula anterior do sessionStorage
-        const ultimaAula = sessionStorage.getItem('ultimaAula');
-        const botao = document.getElementById('voltar-aula');
 
-        if(ultimaAula) {
-            botao.href = `treiner-${ultimaAula}.html`;
-        } else {
-            botao.href = "index.html"; // fallback se não houver registro
-        }
-    </script>
+<a id="voltar-aula" class="btn">Voltar para a última aula</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const botao = document.getElementById('voltar-aula');
+  if (!botao) return;
+
+  const ultima = sessionStorage.getItem('ultimaAula');
+  let href = "index.html"; // fallback
+
+  if (ultima) {
+    // Módulos 2, 3, 4, 5 → prefixo m2-, m3-, m4-, m5-
+    if (ultima.startsWith("m2-")) {
+      href = "modulo-2/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m3-")) {
+      href = "modulo-3/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m4-")) {
+      href = "modulo-4/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m5-")) {
+      href = "modulo-5/treiner-" + ultima + ".html";
+    } else {
+      // Qualquer outra aula → assume módulo 1 (raiz)
+      href = "treiner-" + ultima + ".html";
+    }
+  }
+
+  botao.href = href;
+});
+</script>
 
 </body>
 </html>
