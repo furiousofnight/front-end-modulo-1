@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Estilos CSS externos</title>
   <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar  -->
@@ -16,7 +16,7 @@
         <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','027')">👤 Sobre</a></li>
     </ul>
     </nav>
-<h1 class="centralizado">📘 Aula 27: Estilos CSS externos 📘</h1>
+<h1>📘 Aula 27: Estilos CSS externos 📘</h1>
 <hr>
 
 <!-- O que é CSS externo -->
@@ -72,15 +72,16 @@ p {
 </div>
 <hr>
 <!-- Exemplo visual avançado -->
-<div class="explicacao">
+<div class="demo-section">
     <h2>Exemplo Visual Interativo</h2>
-    <div style="background-color: #4cffb3; color: #000; padding: 12px; border-radius: 6px; text-align: center;">
+    <div class="demo-verde">
         Esse bloco é estilizado via CSS externo! Passe o mouse sobre ele para ver o efeito.
     </div>
-    <div style="background-color: #fff700; color: #000; padding: 12px; border-radius: 6px; text-align: center;">
+    <div class="demo-amarelo">
         Experimente combinar cores, bordas, padding e alinhamento!
     </div>
-    <pre><code>/* CSS */
+    <div class="exemplo-codigo">
+        <pre><code>/* CSS */
 .exemplo-visual {
     border-radius: 6px;
     padding: 12px;
@@ -93,6 +94,7 @@ p {
     transform: scale(1.05);
     box-shadow: 0 4px 12px #0008;
 }</code></pre>
+    </div>
 </div>
 <hr>
 <!-- Comparando tipos de CSS -->
@@ -151,7 +153,7 @@ p {
 <div class="explicacao">
     <h2>Nesse botão abaixo você verá uma outra página.</h2>
     <p>Que vai herdar o estilo do CSS externo usado nessa mesma página.</p>
-    <p class="link-bloco" ><a href="secundarias/estilos-externos.html" target="_blank" rel="noopener noreferrer" class="botao">Ir para Página de Complemento</a></p>
+    <p class="link-bloco"><a href="secundarias/estilos-externos.html" target="_blank" rel="noopener noreferrer">Ir para Página de Complemento</a></p>
 </div>
 <hr>
 <div class="proxima-aula">

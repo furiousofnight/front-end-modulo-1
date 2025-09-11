@@ -68,35 +68,39 @@
   <p>
     Esse exemplo mostra como aplicar diferentes estilos para <strong>body</strong>, títulos e parágrafos diretamente no documento HTML, sem depender de CSS externo.
   </p>
-
-  <h3>Dicas Profissionais:</h3>
-  <ul>
-    <li>
-      Use CSS interno em projetos pequenos ou páginas únicas.
-    </li>
-    <li>
-      Evite para projetos grandes, pois dificulta manutenção e reutilização.
-    </li>
-    <li>
-      Combine com comentários explicativos para facilitar a leitura do código.
-    </li>
-  </ul>
 </div>
+  <div class="explicacao">
+    <h3>Dicas Profissionais:</h3>
+    <ul>
+      <li>
+        Use CSS interno em projetos pequenos ou páginas únicas.
+      </li>
+      <li>
+        Evite para projetos grandes, pois dificulta manutenção e reutilização.
+      </li>
+      <li>
+        Combine com comentários explicativos para facilitar a leitura do código.
+      </li>
+    </ul>
+  </div>
 <hr>
 
-<div class="explicacao">
+<section class="explicacao">
   <h2 id="estrutura-e-visualizacao">Estrutura e Visualização de Estrutura</h2>
   <p>
     É possível definir estilos individuais para cada tipo de título <mark class="amarelo"><strong>(&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;)</strong></mark> e parágrafo <mark class="amarelo"><strong>(&lt;p&gt;)</strong></mark>. Além de cores, é possível controlar <strong>alinhamento</strong>, <strong>margens</strong>, <strong>padding</strong> e <strong>espessura de borda</strong> para cada elemento.
   </p>
 
-  <h3>Exemplo Visual:</h3>
-  <div style="background-color: #4cffb3; color: #000; padding: 12px; border-radius: 6px; text-align: center;">
-    Este parágrafo está estilizado com CSS interno! (verde)
-  </div>
-  <pre><code><b><mark class="AMARELO">div { background-color:#4cffb3; color:#000; text-align:center; padding:12px; border-radius:6px; }</mark></b>
-  </code></pre>
-</div>
+  
+    <h3>Exemplo Visual:</h3>
+    <div class="demo-verde">
+      Este parágrafo está estilizado com CSS interno! (verde)
+    </div>
+    <div class="exemplo-codigo">
+      <pre><code><b><mark class="amarelo">div { background-color:#4cffb3; color:#000; text-align:center; padding:12px; border-radius:6px; }</mark></b></code></pre>
+    </div>
+
+</section>
 <hr>
 
 <div class="explicacao">
@@ -106,23 +110,25 @@
   </p>
 
   <h3>Exemplo Prático:</h3>
-  <div style="background-color: #fff700; color: #000; padding: 12px; border-radius: 6px; text-align: center;">
-    CSS <mark class="verde">interno</mark> é rápido para pequenas páginas.
-  </div>
-  <div style="background-color: #4cffb3; color: #000; padding: 12px; border-radius: 6px; text-align: center;">
-    Use <mark class="amarelo">marcação</mark> para destacar informações importantes.
-  </div>
-<pre><code><b><mark class="amarelo">&lt;p&gt;CSS &lt;mark class="verde"&gt;interno&lt;/mark&gt; é rápido para pequenas páginas.&lt;/p&gt;</mark>
+  <div class="demo-section">
+    <div class="demo-amarelo">
+      CSS <mark class="verde">interno</mark> é rápido para pequenas páginas.
+    </div>
+    <div class="demo-verde">
+      Use <mark class="amarelo">marcação</mark> para destacar informações importantes.
+    </div>
+    <div class="exemplo-codigo">
+      <pre><code><b><mark class="amarelo">&lt;p&gt;CSS &lt;mark class="verde"&gt;interno&lt;/mark&gt; é rápido para pequenas páginas.&lt;/p&gt;</mark>
 
-<mark class="amarelo">&lt;p&gt;Use &lt;mark class="amarelo"&gt;marcação&lt;/mark&gt; para destacar informações importantes.&lt;/p&gt;</mark>
-</b>
-</code></pre>
+<mark class="amarelo">&lt;p&gt;Use &lt;mark class="amarelo"&gt;marcação&lt;/mark&gt; para destacar informações importantes.&lt;/p&gt;</mark></b></code></pre>
+    </div>
+  </div>
 </div>
 <hr>
 
 <div class="explicacao">
   <h2 id="comparando">Comparando CSS: Interno x Externo x Inline</h2>
-  <div class="table-container">
+  <div>
     <table>
       <tr>
         <th>Tipo</th>
