@@ -375,6 +375,7 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
     max-width: 600px;
     margin: 0 auto;
     aspect-ratio: 1;
+    width: 100%;
 }
 
 .video-grid a {
@@ -403,6 +404,19 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
         max-width: 300px;
         gap: 10px;
         padding: 10px;
+        grid-template-columns: repeat(2, 1fr); 
+        aspect-ratio: 1; 
+        width: 100%;
+        height: auto;
+    }
+    
+    .video-grid a {
+        aspect-ratio: 1; 
+    }
+    
+    .video-grid img {
+        width: 100%;
+        height: 100%;
     }
 }
 
