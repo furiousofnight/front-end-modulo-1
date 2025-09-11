@@ -1,4 +1,3 @@
-<!-- Estilos inline: explicação didática -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar  -->
+  <!-- Navbar -->
   <nav class="navbar">
     <ul>
       <li><a href="index.html">🏠 Início</a></li>
@@ -26,7 +25,7 @@
     <h2>Índice</h2>
     <ul>
       <li><a href="#estilo-inline"><strong>O que é estilo inline?</strong></a></li>
-      <li><a href="#propriedades"><strong>propriedades Inline</strong></a></li>
+      <li><a href="#propriedades"><strong>Propriedades Inline</strong></a></li>
       <li><a href="#boas-praticas"><strong>Boas práticas quando usar inline</strong></a></li>
       <li><a href="#exemplo-css-externo"><strong>Exemplo & Resultado CSS Externo</strong></a></li>
       <li><a href="#exemplo-css-inline"><strong>Exemplo & Resultado CSS Inline</strong></a></li>
@@ -51,31 +50,31 @@
 
     <h3><strong>&lt;body style="…"&gt;</strong></h3>
     <ul>
-      <li><mark class="amarelo"><strong>background-color</strong></mark>: <strong><mark class="verde">rgb(7, 39, 49)</mark></strong> — define a cor de fundo da página.</li>
-      <li><mark class="amarelo"><strong>font-family</strong></mark>: <strong><mark class="verde">Arial, sans-serif</mark></strong> — define a família de fontes padrão para todo o documento.</li>
-      <li><mark class="amarelo"><strong>margin</strong></mark>: <strong><mark class="verde">20px</mark></strong> — adiciona espaço externo nas bordas da página.</li>
-      <li><mark class="amarelo"><strong>font-size</strong></mark>: <strong><mark class="verde">20px</mark></strong> — tamanho base de fonte do documento.</li>
+      <li><mark class="amarelo"><strong>background-color</strong></mark>: <mark class="verde"><strong>rgb(7, 39, 49)</strong></mark> — define a cor de fundo da página.</li>
+      <li><mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark> — define a família de fontes padrão para todo o documento.</li>
+      <li><mark class="amarelo"><strong>margin</strong></mark>: <mark class="verde"><strong>20px</strong></mark> — adiciona espaço externo nas bordas da página.</li>
+      <li><mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>20px</strong></mark> — tamanho base de fonte do documento.</li>
     </ul>
 
     <h3><strong>&lt;h1 style="…"&gt; e &lt;h2 style="…"&gt;</strong></h3>
     <ul>
-      <li><mark class="amarelo"><strong>color</strong></mark>: <strong><mark class="verde">aqua</mark></strong> / <strong><mark class="verde">rgb(165, 30, 255)</mark></strong> — cor do texto do título.</li>
-      <li><mark class="amarelo"><strong>font-size</strong></mark>: <strong><mark class="verde">1.5em</mark></strong> (h1) e <strong><mark class="verde">1.2em</mark></strong> (h2) — tamanhos relativos ao font-size do elemento pai.</li>
+      <li><mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>aqua</strong></mark> / <mark class="verde"><strong>rgb(165, 30, 255)</strong></mark> — cor do texto do título.</li>
+      <li><mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>1.5em</strong></mark> (h1) e <mark class="verde"><strong>1.2em</strong></mark> (h2) — tamanhos relativos ao font-size do elemento pai.</li>
     </ul>
 
     <h3><strong>&lt;p style="…"&gt;</strong></h3>
     <ul>
-      <li><mark class="amarelo"><strong>font-family</strong></mark>: <strong><mark class="verde">Arial, sans-serif</mark></strong> — redundante, mas usado para demonstrar herança.</li>
-      <li><mark class="amarelo"><strong>font-size</strong></mark>: <strong><mark class="verde">16px</mark></strong> — tamanho do parágrafo menor que o base.</li>
-      <li><mark class="amarelo"><strong>color</strong></mark>: <strong><mark class="verde">rgb(255, 255, 255)</mark></strong> — texto branco para contraste.</li>
-      <li><mark class="amarelo"><strong>text-align</strong></mark>: <strong><mark class="verde">justify</mark></strong> — alinha o texto em blocos.</li>
+      <li><mark class="amarelo"><strong>font-family</strong></mark>: <mark class="verde"><strong>Arial, sans-serif</strong></mark> — redundante, mas usado para demonstrar herança.</li>
+      <li><mark class="amarelo"><strong>font-size</strong></mark>: <mark class="verde"><strong>16px</strong></mark> — tamanho do parágrafo menor que o base.</li>
+      <li><mark class="amarelo"><strong>color</strong></mark>: <mark class="verde"><strong>rgb(255, 255, 255)</strong></mark> — texto branco para contraste.</li>
+      <li><mark class="amarelo"><strong>text-align</strong></mark>: <mark class="verde"><strong>justify</strong></mark> — alinha o texto em blocos.</li>
     </ul>
   </section>
   <hr>
 
   <!-- Boas práticas -->
-  <div class="explicacao">
-    <h2 id="boas-praticas">Boas práticas quando usar inline</h2>
+  <section class="explicacao" id="boas-praticas">
+    <h2>Boas práticas quando usar inline</h2>
     <ul>
       <li><mark class="verde"><strong>Rápido para demos</strong></mark>: perfeito para aulas, protótipos e testes.</li>
       <li><mark class="verde"><strong>Evite em produção</strong></mark>: inline dificulta manutenção e repete código. Prefira classes no CSS externo.</li>
@@ -83,15 +82,15 @@
       <li><mark class="verde"><strong>Unidades</strong></mark>: <mark class="amarelo"><strong>em</strong></mark> / <strong>rem</strong> são ótimas para tamanhos relativos. <strong>px</strong> dá controle absoluto.</li>
       <li><strong>Acessibilidade</strong>: garanta bom contraste entre <strong>color</strong> e <strong>background-color</strong>.</li>
     </ul>
-  </div>
+  </section>
   <hr>
 
   <!-- Exemplo CSS Interno lado a lado -->
-  <div class="explicacao" id="exemplo-css-externo">
+  <section class="explicacao" id="exemplo-css-externo">
     <h2>Exemplo Visual: CSS Interno</h2>
-    <div style="display:flex; gap:20px; flex-wrap:wrap;">
-      <div style="flex:1 1 45%; min-width:280px;">
-        <pre><code>
+    <div class="exemplo-container">
+      <div class="exemplo-codigo">
+<pre><code>
 /* CSS Interno */
 body {
   background-color: rgb(7, 39, 49);
@@ -102,10 +101,10 @@ body {
 h1 { color: aqua; font-size: 1.5em; }
 h2 { color: rgb(165, 30, 255); font-size: 1.2em; }
 p  { font-size: 16px; color: rgb(255, 255, 255); text-align: justify; }
-        </code></pre>
-      </div>
 
-      <div style="flex:1 1 45%; min-width:280px; background:#0a2a2e; padding:16px; border-radius:8px;">
+</code></pre>
+      </div>
+      <div class="exemplo-render">
         <h1>Capítulo 1</h1>
         <h2>Capítulo 1.1</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
@@ -113,24 +112,24 @@ p  { font-size: 16px; color: rgb(255, 255, 255); text-align: justify; }
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
       </div>
     </div>
-  </div>
+  </section>
   <hr>
 
   <!-- Exemplo Inline lado a lado -->
-  <div class="explicacao" id="exemplo-css-inline">
+  <section class="explicacao" id="exemplo-css-inline">
     <h2>Exemplo Visual: Código Inline & Resultado</h2>
-    <div style="display:flex; gap:20px; flex-wrap:wrap;">
-      <div style="flex:1 1 45%; min-width:280px;">
-        <pre><code>
+    <div class="exemplo-container">
+      <div class="exemplo-codigo">
+<pre><code>
 &lt;h1 style="color:aqua; font-size:1.5em;"&gt;Capítulo 1&lt;/h1&gt;
 &lt;h2 style="color:rgb(165,30,255); font-size:1.2em;"&gt;Capítulo 1.1&lt;/h2&gt;
 &lt;p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;"&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
 &lt;/p&gt;
-        </code></pre>
-      </div>
 
-      <div style="flex:1 1 45%; min-width:280px; background:#0a2a2e; padding:16px; border-radius:8px;">
+</code></pre>
+      </div>
+      <div class="exemplo-render">
         <h1 style="color:aqua; font-size:1.5em;">Capítulo 1</h1>
         <h2 style="color:rgb(165,30,255); font-size:1.2em;">Capítulo 1.1</h2>
         <p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;">
@@ -138,12 +137,12 @@ p  { font-size: 16px; color: rgb(255, 255, 255); text-align: justify; }
         </p>
       </div>
     </div>
-  </div>
+  </section>
   <hr>
 
   <!-- Checklist -->
-  <section class="explicacao">
-    <h2 id="checklist">Checklist rápido</h2>
+  <section class="explicacao" id="checklist">
+    <h2>Checklist rápido</h2>
     <ul class="checklist-rapido">
       <li>Definiu o <mark class="amarelo"><strong>font-size</strong></mark> base no body?✅</li>
       <li>Usou <mark class="amarelo"><strong>em</strong></mark> para títulos (escala relativa)?✅</li>
@@ -181,6 +180,7 @@ p  { font-size: 16px; color: rgb(255, 255, 255); text-align: justify; }
   </footer>
   <hr>
 
+  <!-- Rodapé -->
   <footer class="roda-pe">
     <p>
       © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. 
@@ -189,3 +189,4 @@ p  { font-size: 16px; color: rgb(255, 255, 255); text-align: justify; }
   </footer>
 </body>
 </html>
+<
