@@ -1058,6 +1058,5 @@ audio::-webkit-media-controls-volume-slider {
 .demo-description {
     margin-bottom: 15px;
     line-height: 1.5;
-    color: var(--cor-texto);
-}   
-} 
+    color: var(--cor-texto);}
+}
