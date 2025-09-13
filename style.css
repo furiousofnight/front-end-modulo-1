@@ -504,6 +504,16 @@ mark.amarelo { background-color: var(--cor-mark-amarelo); color: #000; font-weig
 }
 
 
+/* Amostras de cores */
+.cores {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
 /* Elemento Video */
 video {
     display: block;
