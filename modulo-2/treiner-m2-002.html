@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Representando Cores com CSS3</title>
     <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
     <link rel="stylesheet" href="../style.css">
@@ -102,13 +103,31 @@
         <section class="explicacao">
             <h2 id="exemplos-visuais">Exemplos Visuais de Cores</h2>
             <p>Veja exemplos aplicados de cores no HTML:</p>
-            <div style="display:flex; flex-wrap:wrap; gap:12px; margin:12px 0;">
-                <div style="width:80px;height:80px;background-color:red;color:white;text-align:center;line-height:80px;">Red</div>
-                <div style="width:80px;height:80px;background-color:#00FF00;color:black;text-align:center;line-height:80px;">#00FF00</div>
-                <div style="width:80px;height:80px;background-color:rgb(0,0,255);color:white;text-align:center;line-height:80px;">RGB</div>
-                <div style="width:80px;height:80px;background-color:rgba(255,165,0,0.5);color:black;text-align:center;line-height:80px;">RGBA</div>
-                <div style="width:80px;height:80px;background-color:hsl(200,100%,50%);color:white;text-align:center;line-height:80px;">HSL</div>
-                <div style="width:80px;height:80px;background-color:hsla(120,100%,25%,0.6);color:white;text-align:center;line-height:80px;">HSLA</div>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:red;color:black;font-weight:900;">Red</div>
+                    <span class="cor-label">Nome</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">#00FF00</div>
+                    <span class="cor-label">Hexadecimal</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,0,255);color:black;font-weight:900;">RGB</div>
+                    <span class="cor-label">rgb(0,0,255)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgba(255,165,0,0.5);color:black;font-weight:900;">RGBA</div>
+                    <span class="cor-label">rgba(255,165,0,0.5)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(200,100%,50%);color:black;font-weight:900;">HSL</div>
+                    <span class="cor-label">hsl(200,100%,50%)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsla(120,100%,25%,0.6);color:black;font-weight:900;">HSLA</div>
+                    <span class="cor-label">hsla(120,100%,25%,0.6)</span>
+                </div>
             </div>
             <h2>Tipos de Representação de Cores</h2>
             <p class="destaque">As cores podem ser representadas de diferentes formas em HTML e CSS. Cada formato tem suas vantagens dependendo do contexto:</p>
@@ -122,10 +141,19 @@
 &lt;p style="color:green"&gt;Texto verde&lt;/p&gt;
 
 </code></pre>
-            <div style="display:flex; gap:12px; flex-wrap:wrap; margin:12px 0;">
-                <div style="width:80px;height:50px;background-color:red;color:white;text-align:center;line-height:50px;">Red</div>
-                <div style="width:80px;height:50px;background-color:blue;color:white;text-align:center;line-height:50px;">Blue</div>
-                <div style="width:80px;height:50px;background-color:green;color:white;text-align:center;line-height:50px;">Green</div>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:red;color:black;font-weight:900;">Red</div>
+                    <span class="cor-label">Vermelho</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:blue;color:black;font-weight:900;">Blue</div>
+                    <span class="cor-label">Azul</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:green;color:black;font-weight:900;">Green</div>
+                    <span class="cor-label">Verde</span>
+                </div>
             </div>
         </section>
         <!-- Hexadecimal -->
@@ -138,18 +166,18 @@
 &lt;p style="color:#00FF00"&gt;Texto verde&lt;/p&gt;
 
 </code></pre>
-            <div style="display:flex; gap:20px; flex-wrap:wrap; margin:12px 0; align-items:flex-start;">
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:#FF0000;"></div>
-                    <span>#FF0000</span>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#FF0000;color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">#FF0000</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:#0000FF;"></div>
-                    <span>#0000FF</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#0000FF;color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">#0000FF</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:#00FF00;"></div>
-                    <span>#00FF00</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">#00FF00</span>
                 </div>
             </div>
         </section>
@@ -162,18 +190,18 @@
 &lt;p style="color:rgb(0,255,0)"&gt;Texto verde&lt;/p&gt;
 
 </code></pre>
-            <div style="display:flex; gap:20px; flex-wrap:wrap; margin:12px 0; align-items:flex-start;">
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:rgb(255,0,0);"></div>
-                    <span>RGB(255,0,0)</span>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(255,0,0);color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">rgb(255,0,0)</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:rgb(0,0,255);"></div>
-                    <span>RGB(0,0,255)</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,0,255);color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">rgb(0,0,255)</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; width:100px;">
-                    <div style="width:80px;height:50px;background-color:rgb(0,255,0);"></div>
-                    <span>RGB(0,255,0)</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,255,0);color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">rgb(0,255,0)</span>
                 </div>
             </div>
         </section>
@@ -186,18 +214,18 @@
 &lt;p style="color:hsl(120,100%,50%)"&gt;Verde&lt;/p&gt;
 
 </code></pre>
-            <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:flex-start; margin:16px 0;">
-                <div style="display:flex; flex-direction:column; align-items:center; min-width:120px; flex:1;">
-                    <div style="width:100%; max-width:100px; height:60px; background-color:hsl(0,100%,50%); border-radius:6px;"></div>
-                    <span style="margin-top:10px; text-align:center;">HSL(0,100%,50%)</span>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(0,100%,50%);color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">hsl(0,100%,50%)</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; min-width:120px; flex:1;">
-                    <div style="width:100%; max-width:100px; height:60px; background-color:hsl(240,100%,50%); border-radius:6px;"></div>
-                    <span style="margin-top:10px; text-align:center;">HSL(240,100%,50%)</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(240,100%,50%);color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">hsl(240,100%,50%)</span>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:center; min-width:120px; flex:1;">
-                    <div style="width:100%; max-width:100px; height:60px; background-color:hsl(120,100%,50%); border-radius:6px;"></div>
-                    <span style="margin-top:10px; text-align:center;">HSL(120,100%,50%)</span>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(120,100%,50%);color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">hsl(120,100%,50%)</span>
                 </div>
             </div>
             <p class="destaque">💡 <mark class="verde">Dica:</mark> Use HSL para ajustes dinâmicos de saturação e luminosidade em temas responsivos, ou quando quiser alterar tons facilmente.</p>
@@ -230,10 +258,10 @@
 
 </code></pre>
     
-    <div class="exemplo-render" style="background-color:#0a2a2e; padding:12px; border-radius:8px;">
-        <div style="background-color:red;color:white;padding:6px;margin:4px;">Erro</div>
-        <div style="background-color:yellow;color:black;padding:6px;margin:4px;">Aviso</div>
-        <div style="background-color:green;color:white;padding:6px;margin:4px;">Sucesso</div>
+    <div class="exemplo-render" style="background-color:#f5f5f5; padding:12px; border-radius:8px;">
+        <div style="background-color:red;color:rgb(255, 255, 255);padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Erro</div>
+        <div style="background-color:#FFD700;color:black;padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Aviso</div>
+        <div style="background-color:#28a745;color:rgb(255, 255, 255);padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Sucesso</div>
     </div>
     </div>
 </section>
@@ -241,8 +269,16 @@
 <section class="explicacao">
     <h2 id="gradientes-transparencia">Gradientes e Transparência</h2>
         <p>Gradientes permitem transições suaves e profundidade visual:</p>
-        <div style="width:200px;height:80px;background:linear-gradient(to right, red, yellow);text-align:center;line-height:80px;color:black;">Gradiente</div>
-        <div style="width:200px;height:80px;background-color:rgba(0,255,0,0.5);text-align:center;line-height:80px;color:black;">Verde semi-transparente</div>
+        <div class="cores-grid">
+            <div class="cor-item">
+                <div class="cor-box" style="background:linear-gradient(to right, red, yellow);color:black;font-weight:900;">Gradiente</div>
+                <span class="cor-label">linear-gradient(to right, red, yellow)</span>
+            </div>
+            <div class="cor-item">
+                <div class="cor-box" style="background-color:rgba(0,255,0,0.5);color:black;font-weight:900;">Semi-transparente</div>
+                <span class="cor-label">rgba(0,255,0,0.5)</span>
+            </div>
+        </div>
 </section>
 <hr>
 <section class="explicacao">
@@ -278,14 +314,35 @@
 <section class="explicacao">
     <h2 id="paletas-cores-sugeridas">Paletas de Cores Sugeridas</h2>
     <p>Paletas consistentes ajudam a criar identidade visual clara:</p>
-    <div style="display:flex; gap:10px; flex-wrap:wrap; margin:12px 0;">
-        <div style="width:50px;height:50px;background-color:#FF0000;"></div>
-        <div style="width:50px;height:50px;background-color:#FFA500;"></div>
-        <div style="width:50px;height:50px;background-color:#FFFF00;"></div>
-        <div style="width:50px;height:50px;background-color:#00FF00;"></div>
-        <div style="width:50px;height:50px;background-color:#00FFFF;"></div>
-        <div style="width:50px;height:50px;background-color:#0000FF;"></div>
-        <div style="width:50px;height:50px;background-color:#800080;"></div>
+    <div class="cores-grid">
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FF0000;color:black;font-weight:900;">Vermelho</div>
+            <span class="cor-label">#FF0000</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FFA500;color:black;font-weight:900;">Laranja</div>
+            <span class="cor-label">#FFA500</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FFFF00;color:black;font-weight:900;">Amarelo</div>
+            <span class="cor-label">#FFFF00</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">Verde</div>
+            <span class="cor-label">#00FF00</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#00FFFF;color:black;font-weight:900;">Ciano</div>
+            <span class="cor-label">#00FFFF</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#0000FF;color:black;font-weight:900;">Azul</div>
+            <span class="cor-label">#0000FF</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#800080;color:black;font-weight:900;">Roxo</div>
+            <span class="cor-label">#800080</span>
+        </div>
     </div>
 </section>
 <hr>
