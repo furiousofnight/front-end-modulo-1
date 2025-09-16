@@ -1142,7 +1142,7 @@ audio::-webkit-media-controls-volume-slider {
 
 /* Tooltip visível abaixo do abbr, centralizado na tela */
 .tooltip-block abbr::after {
-  content: attr(data-title); /* usa data-title para evitar duplicidade */
+  content: attr(title);
   position: fixed; /* fixa em relação à tela */
   bottom: auto;
   top: 60%; /* posição aproximada; ajustável */
@@ -1180,5 +1180,4 @@ audio::-webkit-media-controls-volume-slider {
     padding: 5px 8px;
   }
 }
-
 
