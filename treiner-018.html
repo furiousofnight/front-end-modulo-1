@@ -7,6 +7,71 @@
     <title>Proposta de desafio</title>
     <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
     <link rel="stylesheet" href="style.css">
+    <style>
+/* ===== Estilo exclusivo para o bloco do Exemplo do Desafio 2 ===== */
+.tooltip-block {
+  position: relative !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.tooltip-block abbr {
+  cursor: pointer !important;
+  border-bottom: 1px dotted var(--cor-principal) !important;
+  position: relative !important;
+  text-decoration: none !important;
+}
+
+/* Tooltip centralizado e fixo na tela */
+.tooltip-block abbr::after {
+  content: attr(data-title) !important; /* usar data-title */
+  position: fixed !important;
+  top: 60% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: var(--cor-fundo) !important;
+  color: var(--cor-texto) !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+  font-size: 0.85em !important;
+  text-align: center !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.25s ease !important;
+  z-index: 9999 !important;
+  max-width: 90vw !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  box-shadow: var(--cor-shadow-light) !important;
+}
+
+/* Mostrar tooltip ao passar ou tocar */
+.tooltip-block abbr:hover::after,
+.tooltip-block abbr:active::after,
+.tooltip-block abbr:focus::after {
+  opacity: 1 !important;
+}
+
+/* Responsividade: quebra de linha em telas pequenas */
+@media (max-width: 480px) {
+  .tooltip-block abbr::after {
+    white-space: normal !important; /* permite quebra de linha */
+    max-width: 85vw !important;
+    padding: 5px 8px !important;
+    font-size: 0.8em !important;
+  }
+}
+
+/* Pequenos ajustes visuais internos do bloco */
+.tooltip-block ol {
+  padding-left: 20px !important;
+}
+
+.tooltip-block ol li {
+  margin-bottom: 10px !important;
+}
+</style>
+
 </head>
 <body>
     
@@ -109,35 +174,38 @@
           <div style="clear:both;"></div>
         </section>
         <hr>
-        <section class="explicacao">
-        <div class="tooltip-block">
-            <h2 id="desafio2">Exemplo visual do desafio 2</h2>
-                <ol>
-                    <li>
-                        <abbr title="Para Parágrafo Use <p></p>">Parágrafo</abbr></li>
-                    <li>
-                        <abbr title="Para Titulos Use <h1></h1> a <h6></h6> Usando a hierarquia">Titulos</abbr>
-                    </li>
-                    <li><abbr title="Para Imagens Use <img>">Imagens</abbr>
-                    </li>
-                    <li>
-                        <abbr title="Para Abreviações Use <abbr title=>sua-descrição</abbr> com aspas no title">Abreviações</abbr>
-                    </li>
-                    <li>
-                        <abbr title="Para Códigos-Fonte use <code></code> ">Código-Fonte</abbr>
-                    </li>
-                    <li>
-                        <abbr title="Para Listas Númeradas use <ol> <li> item-da-lista </li> </ol>">Listas Númeradas</abbr>
-                    </li>
-                    <li>
-                        <abbr title="Para Lista Com Demarcadores use <ul> <li> item-da-lista </li> </ul>">Lista Com Demarcadores</abbr>
-                    </li>
-                </ol>
-                <p>
-                    <strong>ATENÇÃO:</strong> segure o dedo ou mouse sobre os itens da lista acima para ver as dicas nas palavras!
-                </p>
-        </div>
-        </section>
+    <section class="explicacao">
+    <div class="tooltip-block">
+        <h2 id="desafio2">Exemplo visual do desafio 2</h2>
+        <ol>
+            <li>
+                <abbr data-title="Para Parágrafo Use &lt;p&gt;&lt;/p&gt;">Parágrafo</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Títulos Use &lt;h1&gt;&lt;/h1&gt; a &lt;h6&gt;&lt;/h6&gt; usando a hierarquia">Títulos</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Imagens Use &lt;img&gt;">Imagens</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Abreviações Use &lt;abbr data-title=&gt;sua-descrição&lt;/abbr&gt; com aspas no data-title">Abreviações</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Códigos-Fonte use &lt;code&gt;&lt;/code&gt;">Código-Fonte</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Listas Númeradas use &lt;ol&gt; &lt;li&gt; item-da-lista &lt;/li&gt; &lt;/ol&gt;">Listas Númeradas</abbr>
+            </li>
+            <li>
+                <abbr data-title="Para Lista Com Demarcadores use &lt;ul&gt; &lt;li&gt; item-da-lista &lt;/li&gt; &lt;/ul&gt;">Lista Com Demarcadores</abbr>
+            </li>
+        </ol>
+        <p>
+            <strong>ATENÇÃO:</strong> Segure o dedo ou mouse sobre os itens da lista acima para ver as dicas nas palavras!
+        </p>
+    </div>
+</section>
+
         <hr>
         <nav class="proxima-aula">
             <p>
