@@ -1129,3 +1129,49 @@ audio::-webkit-media-controls-volume-slider {
     line-height: 1.5;
     color: var(--cor-texto);}
 }
+
+@font-face {
+    font-family: 'love';
+    src: url('fonts/Mf Love Song.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+    @font-face {
+        font-family: 'fitgirl';
+        src: url('fonts/Filxgirl.TTF') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'angelia';
+        src: url('fonts/Angelia Beauty.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'lovely';
+        src: url('fonts/love story ttf.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    .love { font-family: 'love', sans-serif; color: #E94E77; font-size: 2rem; }
+    .fitgirl { font-family: 'fitgirl', sans-serif; color: #5edf4d; font-size: 1.8rem; }
+    .angelia { font-family: 'angelia', cursive; color: #1E90FF; font-size: 1.8rem; }
+    .lovely { font-family: 'lovely', cursive; color: #FF7F50; font-size: 1.8rem; }
+    @media (max-width: 768px) {
+    .love { font-size: 1.5rem; }
+    .fitgirl { font-size: 1.7rem; }
+    .angelia { font-size: 1.5rem; }
+    .lovely { font-size: 1.2rem; }
+    }
+
+    @media (max-width: 480px) {
+        .love { font-size: 1.2rem; }
+        .fitgirl { font-size: 1.6rem; }
+        .angelia { font-size: 1.2rem; }
+        .lovely { font-size: 0.8rem; }
+    }
