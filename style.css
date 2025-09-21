@@ -1159,9 +1159,13 @@ audio::-webkit-media-controls-volume-slider {
         font-display: swap;
     }
     .love { font-family: 'love', sans-serif; color: #E94E77; font-size: 2rem; }
+
     .fitgirl { font-family: 'fitgirl', sans-serif; color: #5edf4d; font-size: 1.8rem; }
+
     .angelia { font-family: 'angelia', cursive; color: #1E90FF; font-size: 1.8rem; }
+
     .lovely { font-family: 'lovely', cursive; color: #FF7F50; font-size: 1.8rem; }
+    
     @media (max-width: 768px) {
     .love { font-size: 1.5rem; }
     .fitgirl { font-size: 1.7rem; }
