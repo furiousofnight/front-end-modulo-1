@@ -6,14 +6,15 @@
   <title>Pseudo-elementos em CSS</title>
   <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
   <link rel="stylesheet" href="../style.css">
-  <style>
+<style>
 /* ===== Caixas de destaque da Aula 21 ===== */
 .aula21-box {
   margin: 10px 0;
   padding: 10px 15px;
-  background: rgb(31, 116, 244); 
-  color: rgb(255, 255, 255);
+  background: rgb(31, 116, 244); /* azul vibrante */
+  color: rgb(255, 255, 255); /* texto branco */
   border-radius: 5px;
+  border: 4px solid rgb(18, 255, 38); /* borda verde chamativa */
   font-weight: bold;
   display: inline-block;
   transition: background-color 0.3s, transform 0.3s;
@@ -33,7 +34,7 @@
   margin-left: 5px;
 }
 
-/* ===== Primeiro letra e primeira linha ===== */
+/* ===== Primeira letra e primeira linha ===== */
 .aula21-first-letter::first-letter {
   font-size: 2.5rem;
   color: rgb(98, 98, 232);
@@ -51,14 +52,14 @@
   font-weight: bolder;
   cursor: pointer;
   color: rgb(9, 255, 0);
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid transparent; /* linha invisível */
   transition: color 0.2s, border-color 0.2s, transform 0.2s;
 }
 .aula21-link:link   { color: rgb(9, 255, 0); }
 .aula21-link:visited { color: rgb(77, 147, 253); }
 .aula21-link:hover  { 
   color: rgb(239, 11, 255);
-  border-bottom: 2px solid rgb(239, 11, 255);
+  border-bottom: 2px solid rgb(239, 11, 255); /* linha visível */
   transform: scale(1.05);
 }
 .aula21-link:active { 
@@ -66,8 +67,12 @@
   border-bottom: 2px solid rgb(251, 77, 77);
 }
 
-/* ===== Pre para exemplos de código ===== */
-pre.aula21-pre { overflow-x: auto; }
+/* ===== Pré-formatação para exemplos de código ===== */
+pre.aula21-pre { 
+  overflow-x: auto; 
+  padding: 8px;
+  border-radius: 5px;
+}
 
 /* ===== Comparativo de seletores e pseudo-elementos ===== */
 .aula21-comparativo {
@@ -83,6 +88,7 @@ pre.aula21-pre { overflow-x: auto; }
   border-radius: 5px;
   font-weight: bolder;
   transition: background-color 0.3s, transform 0.3s;
+  border: 4px solid rgb(102, 255, 0);
 }
 .aula21-comparativo div:hover {
   background: rgb(45, 145, 220);
@@ -94,6 +100,7 @@ pre.aula21-pre { overflow-x: auto; }
 .aula21-comparativo div p::before {
   content: '✔ ';
 }
+
 </style>
 </head>
 <body>
@@ -151,7 +158,9 @@ pre.aula21-pre { overflow-x: auto; }
       <p>Adicionam conteúdo antes ou depois do conteúdo real de um elemento. É obrigatório definir a propriedade <code>content</code>.</p>
       <pre class="aula21-pre"><code>/* Exemplo de before e after */
 .aula21-decorativo::before { content: '🔥'; margin-right: 5px; }
-.aula21-decorativo::after { content: '✨'; margin-left: 5px; }</code></pre>
+.aula21-decorativo::after { content: '✨'; margin-left: 5px; }
+
+</code></pre>
 
       <div class="aula21-box aula21-decorativo">Link Decorado</div>
       <p class="destaque">💡 Observe que os emojis aparecem sem alterar o HTML.</p>
