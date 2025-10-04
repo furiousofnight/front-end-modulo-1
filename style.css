@@ -121,6 +121,8 @@ nav.navbar {
     transition: all 0.3s ease;
     border: 1px solid var(--cor-navbar-border);
     border-radius: 4px;
+    width: 100%;         /* ocupa 100% da largura disponível */
+    box-sizing: border-box;
 }
 nav.navbar ul {
     margin: 0;
@@ -143,6 +145,53 @@ nav.navbar a:hover {
     background: var(--cor-navbar-border-hover);
     color: #fff;
     border-color: var(--cor-navbar-border);
+}
+/* Substituir o seu @media (max-width: 768px) por este bloco */
+@media (max-width: 768px) {
+    body { margin: 12px; }
+
+    nav.navbar {
+        padding: 6px 12px;
+    }
+
+    nav.navbar ul {
+        display: flex;
+        flex-wrap: nowrap;               /* mantém tudo em uma linha */
+        justify-content: space-between;  /* distribui itens */
+        gap: 6px;                        /* espaçamento reduzido */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;                /* evita scroll lateral */
+    }
+
+    /* NÃO forçar largura igual — deixar o botão adaptar-se ao conteúdo */
+    nav.navbar li {
+        display: block;
+        flex: 0 1 auto;                  /* pode encolher, mas não força equal-width */
+        min-width: 64px;                 /* evita que encolha demais */
+    }
+
+    nav.navbar a {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;         /* mostra "..." se texto for muito longo */
+        text-align: center;
+        padding: 6px 8px;                /* padding reduzido, mas confortável */
+        font-size: clamp(0.75rem, 2.2vw, 0.95rem); /* encolhe com a tela, mas com limites */
+        font-weight: 600;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas */
+@media (max-width: 420px) {
+    nav.navbar ul { gap: 4px; }
+    nav.navbar li { min-width: 56px; }                /* evita ficar absurdo */
+    nav.navbar a {
+        padding: 4px 6px;
+        font-size: clamp(0.65rem, 3.2vw, 0.82rem);
+    }
 }
 
 /*====================
@@ -908,38 +957,6 @@ audio::-webkit-media-controls-volume-slider {
         max-width: 90%;
     }
 
-    
-
-@media (max-width: 768px) {
-    /* Ajustes de Layout Base */
-    body {
-        margin: 12px;
-    }
-
-    /* Navegação Responsiva */
-    nav.navbar {
-        padding: 6px 12px;
-    }
-
-    nav.navbar ul {
-        flex-wrap: nowrap;
-        gap: 8px;
-        justify-content: flex-start;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 4px;
-    }
-
-    nav.navbar li {
-        flex: 0 0 auto;
-    }
-
-    nav.navbar a {
-        display: inline-block;
-        white-space: nowrap;
-        padding: 6px 12px;
-        font-size: 0.85em;
-    }
 
     /* Componentes */
     .proxima-aula {
