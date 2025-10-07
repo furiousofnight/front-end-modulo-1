@@ -360,7 +360,7 @@ nav.navbar a:hover {
 }
 
 pre {
-    background-color: var(--cor-fundo);
+    background-color: rgba(0, 0, 0, 0.265);
     color: var(--cor-texto-alt);
     padding: 16px;
     border-radius: 8px;
