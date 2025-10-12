@@ -604,7 +604,7 @@ video:hover {
 }
 /*borda gradiente para iframe */
         .video-iframe iframe {
-            border: 6px solid; /* define a espessura da borda */
+            border: 6px solid;
             border-image: linear-gradient(135deg, #ff0000, #ff9900, #00ff00, #00ccff, #9900ff) 1;
         }
 /* Controles de Áudio */
