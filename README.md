@@ -1,4 +1,4 @@
-# Front-End Módulo 1
+# Front-End Módulo 1 ao 5
 
 ![Logo do projeto](imagens/logo-sitebook.png)
 
