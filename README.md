@@ -12,15 +12,16 @@ Este repositório reúne páginas, exercícios, exemplos e recursos multimídia 
 
 ## 📂 Estrutura do Projeto
 
-### Páginas Principais
-- `index.html` – Introdução ao módulo e boas-vindas.
-- `Fim-modulo.html` – Encerramento e conclusão do módulo.
-- `indice-geral.html` – Índice geral para navegação entre as aulas.
-- `politica.html` – Informações sobre política de uso.
-- `sobre.html` – Detalhes sobre o projeto e autores.
+### Módulo 1 - HTML e CSS Básico
+#### Páginas Principais
+- `index.html` – Introdução ao módulo e boas-vindas
+- `Fim-modulo.html` – Encerramento e conclusão do módulo
+- `indice-geral.html` – Índice geral para navegação entre as aulas
+- `politica.html` – Informações sobre política de uso
+- `sobre.html` – Detalhes sobre o projeto e autores
 
-### Exercícios e Treinamentos
-O projeto conta com **27 aulas**, cada uma em seu próprio arquivo (`treiner-001.html` até `treiner-027.html`):
+#### Exercícios e Treinamentos
+O módulo 1 conta com **27 aulas** (`treiner-001.html` até `treiner-027.html`):
 
 1. **Estrutura Básica do HTML**
 2. **Bem-vindo ao seu primeiro HTML!**
@@ -50,41 +51,85 @@ O projeto conta com **27 aulas**, cada uma em seu próprio arquivo (`treiner-001
 26. **CSS Interno/Local**
 27. **Estilos CSS externos**
 
-### Estilo
-- `style.css` – Folha de estilos principal, responsável pela aparência das páginas.
+### Módulo 2 - CSS Avançado
+#### Páginas Principais
+- `modulo-2/apresentacao-m2.html` - Apresentação do módulo 2
+- `modulo-2/fim-modulo-2.html` - Conclusão do módulo 2
+- `modulo-2/indice-geral-m2.html` - Navegação do módulo 2
 
-### Imagens
-- Pasta `imagens/` – Ícones, logos e imagens ilustrativas.
+#### Exercícios e Treinamentos
+O módulo 2 conta com **26 aulas** (`treiner-m2-001.html` até `treiner-m2-026.html`):
 
-### Downloads
-- Pasta `links-downloads/` – Materiais complementares em PDF e ZIP para download.
+1. **Psicologia das Cores**: Guia Completo
+2. **Representando Cores com CSS3**: Como Representar as Cores
+3. **Harmonia de cores**: Teoria e Prática
+4. **Paleta de Cores**: Como Criar uma Paleta de Cores
+5. **Capturando Cores da Tela**: Como Capturar Cores da Tela
+6. **Degradê com CSS3**: Como Criar Degradê
+7. **Criando um Exemplo Real de Site**: Aplicação Prática
+8. **Estudo básico e teórico de Tipografia**: Primeiros Passos
+9. **Anatomia do Tipo**: Estudo da Anatomia do Tipo
+10. **Trabalhando com Fontes em CSS**: Fontes e Combinações
+11. **Tamanho de Fonte e Medida em CSS**: Medidas em CSS
+12. **Peso, Estilo, Decoração & Shorthand Font**: Formatação Avançada
+13. **Usando Google Fonts**: Integrando Fontes do Google
+14. **Usando Fontes Externas Personalizadas**: Fontes Customizadas
+15. **Capturando fontes usadas em sites**: Identificação de Fontes
+16. **Detectando fontes dentro de imagens**: Fontes em Imagens
+17. **Alinhamento de textos com CSS**: Técnicas de Alinhamento
+18. **Usando o ID com CSS**: Seletores ID
+19. **Diferenças Entre ID e CLASS**: Seletores no CSS
+20. **Pseudo-classes em CSS**: Uso de Pseudo-classes
+21. **Pseudo-elementos em CSS**: Uso de Pseudo-elementos
+22. **Modelo de Caixas**: Box-Model e Display
+23. **Grouping Tags em HTML5**: Tags de Agrupamento
+24. **Sombra nas Caixas**: Box-shadow em CSS
+25. **Caixas com vértices arredondados**: Border-radius
+26. **Projeto de Site Completo**: Desafio Prático
 
-### Mídia
-- Pasta `midia/` – Arquivos de áudio e vídeo para exemplos multimídia.
-  - **Áudios:** `audio-02.mp3`, `audio-02.ogg`, `audio-02.wav`
-  - **Vídeos:** `Patinho.mkv`, `patinho.mp4`, `patinho.ogv`, `Patinho.webm`
+#### Desafio do Módulo 2
+Pasta `modulo-2/passos-desafio/` com 12 etapas progressivas do desafio, aplicando todos os conceitos aprendidos
+
+### Projeto Android
+Pasta `android/` - Projeto especial com site completo sobre a história do Android
+- `android.html` - Página principal
+- `android.css` - Estilos específicos
+- `modal.js` - Funcionalidades JavaScript
+- Inclui fontes e imagens personalizadas
+
+### Recursos Compartilhados
+- `style.css` – Folha de estilos principal
+- Pasta `imagens/` – Ícones, logos e imagens ilustrativas
+- Pasta `links-downloads/` – Materiais complementares
+- Pasta `midia/videos/` – Arquivos de vídeo para exemplos
+- Pasta `fonts/` - Fontes personalizadas
 
 ### Páginas Secundárias
-- Pasta `secundarias/` – Notícias, estilos externos e conteúdos complementares.
-  - `estilos-externos.html`
-  - `noticias.html`
-  - `secundaria-001.html` até `secundaria-004.html`
+Pasta `secundarias/` com conteúdos complementares:
+- `estilos-externos.html`
+- `noticias.html`
+- `secundaria-001.html` até `secundaria-004.html`
 
 ---
 
 ## ⚡ Como Utilizar
 
-1. Abra os arquivos HTML em seu navegador para visualizar os exemplos e exercícios.
-2. Explore as pastas de **imagens** e **mídia** para recursos visuais e sonoros.
-3. Utilize os arquivos de **download** para obter materiais extras.
-4. Navegue pelo **índice geral** para acessar rapidamente qualquer aula ou conteúdo.
+1. Comece pelo Módulo 1 para aprender os fundamentos de HTML e CSS
+2. Avance para o Módulo 2 para aprofundar seus conhecimentos em CSS
+3. Pratique com o projeto Android, aplicando os conceitos aprendidos
+4. Use os índices gerais de cada módulo para navegação rápida
+5. Explore os recursos complementares nas pastas de mídia e downloads
 
 ---
 
 ## 🎯 Objetivo
 
-Fornecer uma base prática e visual para iniciantes e revisores de conceitos de front-end.  
-O projeto cobre desde a **estrutura básica do HTML** até o uso de **CSS externo**, passando por **multimídia, listas, links, desafios e boas práticas**.
+Fornecer uma base completa e progressiva para desenvolvimento front-end, cobrindo:
+- **Módulo 1**: Fundamentos de HTML5 e CSS3 básico
+- **Módulo 2**: CSS avançado e design responsivo
+- **Projeto Prático**: Site do Android com todas as técnicas aprendidas
+
+O projeto oferece uma jornada estruturada desde os conceitos básicos até aplicações práticas completas, focando em HTML5 e CSS3.
 
 ---
 
