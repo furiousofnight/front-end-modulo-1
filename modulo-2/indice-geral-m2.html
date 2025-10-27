@@ -63,6 +63,103 @@
             color: #fff700;
             text-decoration: underline;
         }
+    /* Estilos para a sublista do desafio */
+    .sublista-desafio {
+        display: none;
+        margin: 15px 0;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        list-style-type: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sublista-desafio.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-toggle-desafio {
+        background: linear-gradient(135deg, #00ccff33, #00ff9933);
+        border: 1px solid #00ff9955;
+        color: #00ff99;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .btn-toggle-desafio:hover {
+        background: linear-gradient(135deg, #00ccff55, #00ff9955);
+        transform: translateY(-2px);
+    }
+
+    .sublista-desafio li {
+        background: rgba(0, 0, 0, 0.3);
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+
+    .sublista-desafio .intro-desafio {
+        border-left: 3px solid #00ff99;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Responsividade apenas para a sublista */
+    @media (max-width: 768px) {
+        .sublista-desafio {
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .sublista-desafio li {
+            padding: 8px;
+            margin: 6px 0;
+            font-size: 0.85em;
+        }
+
+        .sublista-desafio .intro-desafio {
+            padding-left: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sublista-desafio {
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .sublista-desafio li {
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 0.8em;
+        }
+
+        .sublista-desafio .intro-desafio {
+            padding-left: 10px;
+            margin-bottom: 10px;
+            border-left-width: 2px;
+        }
+
+        .btn-toggle-desafio {
+            padding: 6px 12px;
+            font-size: 0.85em;
+        }
+    }
+
     /* Links dentro do parágrafo do rodapé */
         .roda-pe p {
     font-size: 0.9em;
@@ -255,6 +352,26 @@
             <h2>Aula 26: Criando um Projeto a Partir do Zero</h2>
             <p>Desafio criando um site do zero com muita experiência prática</p>
             <a href="treiner-m2-026.html">Ver Aula</a>
+            <button class="btn-toggle-desafio" onclick="toggleDesafio()">Ver Passos do Desafio</button>
+            <ul class="sublista-desafio" id="sublistaDesafio">
+                <li class="intro-desafio">
+                    <h3>Introdução ao Desafio</h3>
+                    <p>Neste desafio, você irá criar um site completo do zero, aplicando todos os conceitos aprendidos até agora. Siga os passos abaixo para uma construção progressiva e organizada.</p>
+                    <a href="passos-desafio/introducao-desafio.html">Ver Introdução</a>
+                </li>
+                <li><a href="passos-desafio/passo-1.html">Passo 1: Preparação do Ambiente</a></li>
+                <li><a href="passos-desafio/passo-2.html">Passo 2: Estrutura Básica HTML</a></li>
+                <li><a href="passos-desafio/passo-3.html">Passo 3: Cabeçalho e Navegação</a></li>
+                <li><a href="passos-desafio/passo-4.html">Passo 4: Conteúdo Principal</a></li>
+                <li><a href="passos-desafio/passo-5.html">Passo 5: Estilização Inicial</a></li>
+                <li><a href="passos-desafio/passo-6.html">Passo 6: Cores e Fontes</a></li>
+                <li><a href="passos-desafio/passo-7.html">Passo 7: Layout e Posicionamento</a></li>
+                <li><a href="passos-desafio/passo-8.html">Passo 8: Imagens e Mídia</a></li>
+                <li><a href="passos-desafio/passo-9.html">Passo 9: Responsividade</a></li>
+                <li><a href="passos-desafio/passo-10.html">Passo 10: Efeitos e Animações</a></li>
+                <li><a href="passos-desafio/passo-11.html">Passo 11: Otimização</a></li>
+                <li><a href="passos-desafio/passo-12.html">Passo 12: Finalização</a></li>
+            </ul>
         </li>
 
     </ol>
@@ -266,5 +383,12 @@
     <a href="modulo-4/apresentacao-m4.html" class="btn-modulo">Ir Módulo 4</a>
     <a href="modulo-5/apresentacao-m5.html" class="btn-modulo">Ir Módulo 5</a>
 </div>
+
+<script>
+    function toggleDesafio() {
+        const sublista = document.getElementById('sublistaDesafio');
+        sublista.classList.toggle('active');
+    }
+</script>
 </body>
 </html>
